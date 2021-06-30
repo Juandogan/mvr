@@ -1,0 +1,66 @@
+
+      <div class="card sombraBox" style="padding: 10px;background-color: white; margin-left:10px; margin-right: 15px; margin-bottom:10px!important">
+
+        <div class="card-content">
+          <h4 class="card-title">
+            <h6 style="font-size: 15px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown">#{{this.data?.categoria}}</h6>
+            <div style="margin-top:-10px">
+              <a routerLink="../articulos/{{data?._id}}">
+              <h5 class="titulo text2" >{{this.data?.titulo}}</h5>
+            </a>
+<hr style="margin-top:-5px">
+            </div>
+          </h4>
+          <div class="">
+
+          </div>
+      </div>
+
+      <a routerLink="../articulos/{{data?._id}}">
+                <!-- <img src="{{this.stringIM}}" width="100%" > -->
+                <iframe width="100%" height="200" [src]="data?.imagen2 | safe" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+                                                                  </a>
+          <small class="text3" style="margin-left:4px; margin-top:10px; line-height:15px" [innerHTML]='this.data?.descripcion1'></small>
+          <br />
+
+          <div class="card-read-more" style="margin-top:-10px">
+
+
+
+<!-- INICIO FOOTER FECHA Y AUTOR -->
+<!-- <div style="display: flex; justify-content: left; margin-left:15px; margin-top:5px ; margin-bottom: -10px">
+  <div>
+      <div  style="display:flex ; align-items: flex-start; margin-top:2px; margin-left:-20px; margin-right: 2px" >
+          <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(161, 161, 161)">event_available</mat-icon>
+           <div>
+                   <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(161, 161, 161)">{{this.crudService.fechaPipe(data.creado)}}</h3>
+           </div>
+      </div>
+  </div>
+
+
+
+ <div style="margin-top:-10px; ">
+
+      <div   style="display:flex ; align-items: flex-start; margin-top:5px; margin-right: 5px" >
+          <mat-icon class="mr-2"style="font-size:16px;color:rgb(161, 161, 161); margin-top:9px">account_circle</mat-icon>
+           <div>
+                   <h3  class="subtituloResposive2" style="font-size:11px; margin-top:4px; margin-left: -14px;  color:rgb(161, 161, 161)">MVR</h3>
+           </div>
+      </div>
+  </div>
+
+  </div> -->
+<!-- FIN FOOTER FECHA Y AUTOR -->
+
+
+
+          </div>
+      </div>
+
+
+
+
+
+  <br><br><br><br><br>

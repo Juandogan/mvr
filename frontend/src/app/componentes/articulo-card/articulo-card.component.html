@@ -1,0 +1,83 @@
+
+
+      <div class="card  principal sombraBox marginB"  style="border: 2px solid rgb(240, 240, 240)">
+
+        <div class="card-content">
+          <h4 class="card-title">
+             <h6 style="font-size: 15px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown; margin-left:3px">#{{this.data?.categoria}}</h6>
+            <div style="margin-top:-10px">
+
+              <a routerLink="../../articulos/{{data?._id}}">
+
+                <h5 class="titulo text1 mt-2"   >{{this.data?.titulo}}</h5> </a>
+                <small class="text2 subtitulo" style="margin-bottom:0px" >{{this.data?.subtitulo}}</small>
+
+                <a routerLink="../articulos/{{data?._id}}"><img src="{{this.stringIM}}" width="100%" style="border-radius: 5px; margin-top:10px"></a>
+                <!-- <h5  class="mt-1  " style="font-size: 12px; margin-left:5px; color:brown">Leer más..</h5> -->
+
+
+<!-- INICIO FOOTER FECHA Y AUTOR -->
+                <div style="display: flex; justify-content: left; margin-left:15px; margin-top:5px ; margin-bottom: -40px">
+                  <div>
+                      <div  style="display:flex ; align-items: flex-start; margin-top:2px; margin-left:-20px; margin-right: 2px" >
+                          <mat-icon  class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(161, 161, 161)">event_available</mat-icon>
+                           <div>
+                                   <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(161, 161, 161)">{{this.crudService.fechaPipe(data.creado)}}</h3>
+                           </div>
+                      </div>
+                  </div>
+
+
+
+                 <div style="margin-top:-10px; ">
+
+                      <div   style="display:flex ; align-items: flex-start; margin-top:5px; margin-right: 5px" >
+                          <mat-icon class="mr-2"style="font-size:16px;color:rgb(161, 161, 161); margin-top:9px">account_circle</mat-icon>
+                           <div>
+                                   <h3  class="subtituloResposive2" style="font-size:11px; margin-top:4px; margin-left: -14px;  color:rgb(161, 161, 161)">MVR</h3>
+                           </div>
+                      </div>
+                  </div>
+
+                  </div>
+ <!-- FIN FOOTER FECHA Y AUTOR -->
+
+
+            </div>
+          </h4>
+          <div class="">
+
+          </div>
+      </div>
+
+
+
+          <!-- <div class="card-read-more" style="margin-top:10px">
+
+
+                <div style="display:flex ; align-items: flex-start; margin-top:-5px; margin-bottom:-15px" >
+                  <mat-icon class="ml-0 mr-2 mt-1"style="font-size:120%;  color:rgb(148, 148, 148)">event</mat-icon>
+                   <div>
+                   <h3  class="subtituloResposive2" style="font-size:12px;margin-right: 5px; margin-top:-2px; margin-left: -12px; color:rgb(148, 148, 148)">{{data?.creado|date:'dd/MM/yyyy'}}</h3>
+                   </div>
+                   <mat-icon class="ml-0 mr-2 mt-1"style="font-size:120%; color:rgb(148, 148, 148)">account_box</mat-icon>
+                   <div>
+                   <h3  class="subtituloResposive2" style="font-size:12px;margin-left:-15px; margin-top:-2px; color:rgb(148, 148, 148)">MVR</h3>
+                   </div>
+
+
+              </div>
+
+
+
+          </div> -->
+
+
+
+      </div>
+
+
+
+
+
+  <br><br><br><br><br>

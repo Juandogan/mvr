@@ -1,0 +1,157 @@
+
+<div  (window:scroll)="evento($event)">
+<div *ngIf='loader' class="marginResposive">
+  <div class="text-center">
+<img src="../../../assets/loading4.gif" alt="" align='center' width="100px">
+</div>
+</div>
+
+<div *ngIf='!loader'>
+ <app-portada></app-portada>
+
+<div class="mt-1 pm0 " style="width:100%; background-color: rgba(240, 240, 240, 0.39);">
+  <br>
+  <!-- bisque;background-image: url('../../../assets/fondo1.jpg');   background-attachment:fixed;
+       background-repeat: repeat; -->
+       <div class="flex-container3" style="margin-top:-5px!important">
+       <!-- <img src="../../../assets/recorte.png" alt="" style="opacity:0.8; width: 100px;">
+       <img src="../../../assets/recorteSeparador1 d.png" alt="" style="opacity:0.8; width: 100px;"> -->
+      </div>
+ <div  style="margin-top:20px; margin-bottom: 10px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;" >
+  <div class="flex-container margin600">
+
+   <mat-icon style="margin-top:6px; margin-left:0px; color:brown"> error</mat-icon>
+  <h2 class="tituloBarra" style="color:rgb(56, 56, 56)"> Últimas Novedades (19)</h2>
+
+   </div>
+
+</div>
+
+<br style="margin-bottom: 0px; padding-bottom:0px;">
+<div class="flex-container3">
+<!-- <img src="../../../assets/recorteseparadoabajoizq.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
+  <img src="../../../assets/recorteSeparador1 abajoderecha.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">  -->
+ </div>
+
+<div  style="background-color:rgba(255, 255, 255, 0); margin-left:0px; margin-right: 0px; margin-top:-40px">
+
+  <!-- desktop -->
+  <br><br>
+  <div class="row pm0 ">
+    <div *ngFor="let producto of productos |filtro:'Articulos'|filtrox4:4 "
+    class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 ocultar600 ;
+    ">
+      <!-- <img *ngIf="!this.crudService.loading" src="../../../assets/cabecera.png" alt="" style=" margin-left:40px; width: 70%; object-fit: cover;"> -->
+
+   <app-articulo-card [data]="producto"></app-articulo-card>
+
+   </div>
+   </div>
+
+
+<!-- desktop -->
+
+<!-- mibile -->
+<div class="row pm0" style="margin-left:15px!important; margin-right: 15px!important; " >
+  <div *ngFor="let producto of productos |filtro:'Articulos'|filtrox4:4 "
+   class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding: 0px; padding-left:10px; margin-bottom:-0px">
+ <app-articulo-card-desktop [data]="producto" ></app-articulo-card-desktop>
+ </div>
+</div>
+<!-- mibile -->
+
+
+</div>
+<!-- inicio serparado -->
+
+<div>
+
+
+<div class="flex-container3">
+  <!-- <img src="../../../assets/recorte.png" alt="" style="opacity:0.8; width: 100px;">
+  <img src="../../../assets/recorteSeparador1 d.png" alt="" style="opacity:0.8; width: 100px;"> -->
+ </div>
+<div class="separadorPubli" >
+<div class="flex-container margin600">
+
+<mat-icon style="margin-top:6px; margin-left:0px; color:brown"> photo_camera</mat-icon>
+<h2 class="tituloBarra " > Publicaciones Archivos  (19)</h2>
+
+</div>
+
+</div>
+
+
+<br style="margin-bottom: 0px; padding-bottom:0px;">
+<div class="flex-container3" >
+<!-- <img src="../../../assets/recorteseparadoabajoizq.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
+<img src="../../../assets/recorteSeparador1 abajoderecha.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px; background-attachment: fixed;"> -->
+</div>
+
+</div>
+ <!-- fin de separado -->
+<br style="padding-bottom:0px; margin-bottom:0px;">
+
+
+  <!-- desktop -->
+<div class="ocultar600" style="margin-top: -15px;">
+    <app-publi-card></app-publi-card>
+</div>
+<!-- desktop -->
+
+<!-- mobile -->
+<div class="mostrar600">
+  <div class="row pm0 " style="margin-top:-30px!important">
+    <div *ngFor="let producto of productos |filtro:'Categoria'"   class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding-left:10px;">
+      <app-publi-card-mobile [data]="producto" ></app-publi-card-mobile>
+   </div>
+  </div>
+<!-- mobile -->
+
+</div>
+
+<br>
+<br>
+<br>
+  <div class="separador1" >
+    <div class="flex-container" >
+    <mat-icon style="margin-top:6px; margin-left:14px; color:brown">photo_camera</mat-icon>
+    <h2 style=" font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 22px;
+    margin-left: 5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px; " > Exposición de objetos</h2>
+  </div>
+  </div>
+
+  <div style="background-color:rgba(255, 255, 255, 0);">
+    <div class="row pm0" style="margin-right:20px!important;">
+      <div *ngFor="let producto of productos |filtro:'Exposicion'|filtrox4:4"   class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pm0 cardExpo"  >
+     <app-articulo-card [data]="producto"></app-articulo-card>
+     </div>
+
+  </div>
+
+
+<br>
+  <div class="marginB "style="margin-bottom: 35px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro; margin-top:20px" >
+    <div class="flex-container" >
+    <mat-icon style="margin-top:6px; margin-left:14px; color:brown">photo_camera</mat-icon>
+    <h2 style=" font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 22px; margin-left:
+    5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px" >Videos</h2>
+  </div>
+  </div>
+
+  <div>
+
+    <div class="row pm0">
+      <div *ngFor="let producto of productos |filtro:'Videos'|filtrox4:4 "   class="col-sm-12 col-md-6 col-lg-3 col-xl- 3 pm0 " >
+     <app-videos-card [data]="producto"></app-videos-card>
+     </div>
+
+  </div>
+
+
+
+</div>
+</div>
+</div>
+</div>
+</div>

@@ -1,0 +1,154 @@
+.separador{
+    margin-bottom: 35px;
+    background-color: rgb(255, 255, 255);
+    margin-top:-80px;
+    border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro;
+  }
+
+  .marginResposive{margin-top:250px}
+  .marginB{margin-top:-80px!important; }
+  .tituloBarra{color:rgba(53, 53, 53, 0.877); font-family: 'Yanone Kaffeesatz', sans-serif;
+   font-size: 22px; margin-left: 5px; margin-bottom: 0px;  border-radius: 1px; margin-top:4px}
+
+ .separador1{
+  margin-bottom: 35px;
+  background-color: white;
+   margin-top:-70px; border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;
+ }
+ .separadorPubli{margin-bottom: 10px; background-color: rgb(255, 255, 255);
+  border-top: 1px solid gainsboro;
+  border-bottom: 1px solid gainsboro;
+   margin-top:-65px}
+
+
+.mostrar600{display:none}
+.cardExpo{margin-top:-80px!important}
+
+.pm0{padding:0px!important; margin:0px!important}
+
+.flex-container3 {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  }
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(3) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-container {
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  }
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(3) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+  @media  (max-width: 620px){
+    .mostrar600{display:inline}
+    .ocultar600{display:none}
+    .marginPadding0{margin:0px!important; padding: 0px!important;}
+    .separador{margin-top:10px;}
+    .separador1{margin-top:-45px;}
+    .marginResposive{margin-top:200px;}
+    .margin600{margin-left:15px!important}
+    .separadorPubli{margin-top: 10px!important;}
+    .cardExpo{margin-bottom:-10px!important}
+    .marginB{margin-top: 5px!important;}
+  }
+

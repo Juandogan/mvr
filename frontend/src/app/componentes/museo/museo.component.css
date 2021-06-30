@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+h1, p{font-family: 'Roboto Condensed' ; font-size:30px}
+
+
+  @media (max-width: 1000px)
+  {
+
+    .respon{margin-left:10px!important; margin-right: 10px!important}
+
+  }
+
+
+
+
+  @media (min-width: 1000px)
+  {
+
+
+  h1{text-align:left!important; margin-left:0px; font-family: 'Roboto Condensed'!important }
+  .categoriaResposive{
+    font-size: calc(1.5em + 0.2vw); color:rgb(0, 0, 0);
+   font-family: 'Roboto Condensed';
+    letter-spacing: 0px;
+  }
+
+    h4{font-size:13px}
+
+
+    .tituloResponsive{
+      text-shadow: 2px 2px 2px rgb(180, 180, 180);
+      font-size: calc(1.2em + 0.3vw);
+      font-family: 'Roboto Condensed';
+      margin-top:-20px;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .tituloResponsive2{
+
+      font-size: calc(1.2em + 0.3vw);
+      line-height: 25px;
+      margin-top:-10px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+
+    .subtituloResposive{
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+
+      font-size:12px;
+      margin-top: -16px;
+      line-height: 14px;
+
+
+
+    }
+
+    input{border-radius: 5px;
+
+
+
+
+    }
+    .subtituloResposive2{
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: -6px;
+      font-size:14px;
+      margin-top: -6px;
+      line-height: 18px;
+
+
+
+    }
+    .serie{
+      font-size:10px;
+      margin-top:-25px;}
+
+
+    .ColorFondo{
+        background-color:rgb(255, 255, 255); /*Color fondo barra*/
+
+     }
+     #Ventana2{display:none}
+
+           .wanda{
+
+     font-size:70px;
+     background-color: red
+
+           }
+
+
+     .contenedor{
+         position: relative;
+         display: inline-block;
+         text-align: center;
+     }
+
+     .texto-encima{
+         position: absolute;
+         top: 10px;
+         left: 10px;
+     }
+
+
+           .text {
+
+             display: -webkit-box;
+             -webkit-line-clamp: 3;
+             -webkit-box-orient: vertical;
+             overflow: hidden}
+
+             .text2 {
+
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+              overflow: hidden}
+              .text3 {
+
+                display: -webkit-box;
+                -webkit-line-clamp: 3;
+                -webkit-box-orient: vertical;
+
+                overflow: hidden}
+
+           img{border-radius: 3px;
+             object-fit: cover;
+
+         }
+
+
+
+
+           footer {
+             display: block;
+           }
+
+     .contenedorNavbar {
+     background-color: rgb(0, 0, 0);  /*Color Fondo Navbar*/
+     width: 100%;
+     height: 45px;
+     margin-top:-10px;
+     margin-bottom: -30px;
+                       }
+
+
+
+     /* Estilos Menu Navbar*/
+           li {
+               display: inline;
+              }
+
+     .menuTexto {
+             font-family:'Roboto', sans-serif;
+             font-size: 13px;
+             letter-spacing: 2px;
+             text-decoration: none;
+             float: left;
+             padding: 10px;
+             color: rgb(107, 107, 107); /*Color texto*/
+             margin-top:3px;
+             margin-left:3px;
+                     }
+
+
+     .activo{
+                   color:rgb(255, 255, 255);  /*Color texto-activo*/
+                  }
+
+    .cartelCorona{opacity:0.9;
+         border-radius: 2%!important;
+         width: 18rem;
+         background-color: rgba(255, 255, 255, 0.856) ;
+         color:rgb(0, 0, 0) ;
+         margin-top:-380px;
+         margin-right: 5%;
+         float:right}
+
+         /* Estado Carrito */
+         /* .opt2{background-image: url('../../assets/carritofalse1.jpg'); width: 55px; height: 30px;}
+         .opt1{background-image: url('../../assets/carritotrue2.jpg');  width: 55px; height: 30px; color:rgb(255, 203, 32)}
+      */
+      @media  (min-width: 330px)
+      {
+      /* .solores{ visibility:visible !important} */
+      .imgfuera{ display:none !important;}
+      ;
+      }
+
+
+
+      @media (max-width: 750px)
+      {
+      /* .solores{ visibility:visible !important} */
+      .ajusteCorona{float:none ; margin-left:auto; margin-right: auto; margin-bottom: 40px}
+      .dale{margin-top:50px;}
+
+
+      }
+
+
+    @media  (max-width: 990px)
+    {.correcionMT{ margin-top:-10px}
+    .dale2{ display:block !important; }
+    /* .solores{ visibility:visible !important} */
+    .acomoda2{margin-top:-15px; font-size:12px; margin-right: 15px;}
+     .only{ display:none !important ; }
+     .onlyImg{ display:none; }
+     .acomoda{margin-top:20px;}
+    .borderRes{border-radius:0%!important}
+    .mt1{margin-top:20px}
+
+    .dale{ display:inline !important; }
+
+    .float{float:left; }
+
+    }
+
+
+
+
+    @media  (min-width: 420px)
+    {
+    /* .solores{ visibility:visible !important} */
+    .only1{ display:none !important;}
+    ;
+    }
+
+    @media  (min-width: 750px)
+    {
+    /* .solores{ visibility:visible !important} */
+    .acomode{margin-top:-45px}
+    ;
+    }
+
+
+
+    @media  (max-width: 990px)
+    {
+    /* .solores{ visibility:visible !important} */
+    .ajusteFoto{margin-top:60px!important};
+
+
+    }
+
+
+
+    @media  (max-width: 335px)
+    {
+    /* .solores{ visibility:visible !important} */
+    .quitar320{display: none!important}
+
+
+    }
+
+
+    @media  (max-width: 1200px)
+    {
+    /* .solores{ visibility:visible !important} */
+    .quitarMargen{margin-left:10px; margin-right:10px}
+
+
+    }
+
+
+  };
+
+
+
+

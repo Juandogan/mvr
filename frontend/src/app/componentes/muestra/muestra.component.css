@@ -1,0 +1,116 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+/* responsive text*/
+
+p{margin-bottom:20px}
+.blink_me {
+
+    animation: blinker 1.2s alternate-reverse;
+    animation-delay: -0.5s;
+  }
+
+
+  @keyframes blinker {
+    90% {
+      opacity: 0;
+    }
+  }
+  @keyframes hideShow {
+    100%, 16.6%, 33.33%, 100% { width: 0; }
+    16.66%, 33.3% { width: auto; }
+  }
+.sombra1{
+text-shadow: 1px 1px 1px rgb(221, 221, 221)
+}
+
+
+.capital::first-letter {
+
+  float: right;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 310%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  line-height: 60%;
+  color:rgb(136, 136, 136)
+}
+
+    .titulo {
+          display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden; }
+
+    .text {
+
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+}
+
+h1 {
+    font-family: 'Roboto Condensed';
+    margin-bottom: 4px;
+    margin-top: -5px;
+    color: rgb(0, 0, 0);
+font-size: 40px;
+
+
+    }
+
+h2{font-family: 'Roboto Condensed';
+    font-size:calc(0.9em + 0.3vw);
+    margin-top:calc(0.2em + 0.5vw);
+    line-height: calc(1.2em + 0.2vw);
+    color: rgb(70, 70, 70);
+}
+
+@media  (max-width: 900px)
+{
+/* .solores{ visibility:visible !important} */
+.ajusteFontSub{font-size: 15px!important;}
+
+
+
+}
+
+    @media  (min-width: 600px)
+    {
+      .cale{ display:block !important} ;
+    .ajustetop{margin-top:110px!important}
+.quitar600{display:none}
+.inter{ line-height: 50px !important} ;
+
+}
+
+    @media  (max-width: 1200px)
+{
+
+.dale{ display:inline-block !important;}
+
+
+}
+
+
+@media  (max-width: 990px)
+{
+/* .solores{ visibility:visible !important} */
+.ajusteFoto{ margin-top:110px!important};
+.ajusteFontSub{background-color: black;}
+
+
+}
+
+@media  (max-width: 600px)
+{
+
+
+  .arreglo{margin-top:125px!important;
+}
+arreglo2{margin-bottom:-10px}
+
+
+}

@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+
+.fondoIcon{color:white!important}
+.fondoIconMuseo{color:white!important}
+.fondoNavbarDark{background-color: rgb(0, 0, 0)!important; border:none!important; border-radius: 5px!important; }
+.imgScroll{
+
+margin-top: -110px!important;
+
+}
+
+
+.navbarResponsive{
+    color: rgb(0, 0, 0);
+    margin-top:6px;
+    margin-left: 10px;}
+
+.logoMuseo{width: 300px; margin-top:0px}
+
+.logomMuni{width: 170px; }
+
+hr{margin-top: 5px; }
+
+h3{font-size: 17px!important;}
+
+.font{font-family: 'Yanone Kaffeesatz', sans-serif;
+  color:rgb(34, 34, 34); font-size:22px; margin-top:7px; margin-left: 10px;
+  letter-spacing: 1px;
+}
+
+
+.logoBarra{display: none;}
+.logoBarra2{display: inline;}
+.fondo{ background-color: rgb(255, 255, 255);}
+
+/* background-image: url('../../../assets/dale.jpg'); */
+
+.menu{height: 40px;  margin-top:10px; background-color: rgb(255, 255, 255); }
+
+.itemMenu{display:flex ; align-items: flex-start; margin-top:-5px;
+  border:1px solid rgb(223, 223, 223);
+   border-left: none; border-right: none; height: 40px;
+
+  }
+
+   .activo{
+    transition: all 0.3s ease-in-out;
+    color:rgb(199, 83, 83)!important;  /*Color texto-activo*/
+     font-size:20px!important;
+   }
+
+   a{text-decoration: none;}
+
+   .agregar600{display:none;}
+
+.flex-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  }
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+
+
+
+  @media  (max-width: 1300px){
+
+  }
+
+
+
+
+@media  (max-width: 800px){
+  .logoMuseo{width: 240px;}
+  .logomMuni{width: 120px;}
+
+}
+
+@media  (max-width: 600px){
+
+  .logomMuni{display: none;}
+  .quitar600{display:none}
+  .agregar600{display:block}
+  .navbarResponsive{margin-left:15px!important; }
+  .imgMuseo{display:none!important}
+  .activo{font-size:24px!important;}
+  .fondoNavbarDark{ border-radius: 0px!important; }
+}
+
+.flex-container1 {
+
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  }
+
+.flex-item:nth-child(1) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(2) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }
+
+.flex-item:nth-child(3) {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
+  }

@@ -1,0 +1,82 @@
+<div class="margen mtCategoria" style="margin-top:160px">
+
+
+  <h4 style="color:rgb(128, 128, 128)" style="margin-left:5px" >|  Publicaciones |  <span style="color:brown">Naturaleza</span></h4>
+
+  <div *ngIf="this.loading">
+
+          <div align="center">
+              <img src="../../../assets/loading4.gif" width="100px" alt="">
+
+           </div>
+
+          </div>
+
+  <div style="margin-top:-10px" *ngFor ="let producto of productos |filtro:'Naturaleza'">
+
+  <div class="row" style="margin:5px; padding:0px">
+       <div class="col-sm-12 col-lg-3" style=" margin:0px; padding:0px">
+                  <img src='http://157.230.228.106:3000/upload/{{cut(producto.imagen4)}}' alt="" style="object-fit:scale-down; height: 250px; margin-right:10px; padding:0px; width:100%" class="sombra only1; mt-1">
+                   <h6 class="only1">Imagen: {{producto.imagen2}}</h6>
+       </div>
+
+       <div class="col-sm-12 col-lg-8"style="margin-left:12px; padding:0px">
+
+                  <h1></h1>
+                  <h1 class="text2" style="margin-bottom: 5px">{{producto.titulo}}</h1>
+                  <h5 style="margin-top:-5px">Por: {{producto.imagen3}}</h5>
+                  <h5 class="text4" style="margin-top:-5px"><b>Resumen</b></h5>
+                  <p style="margin-top:-10px"> {{producto.descripcion1}}</p>
+
+
+
+
+<div style="display: flex; justify-content: left;">
+
+      <div>
+
+
+
+          <div  class="aca" style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px ; margin-left:-10px" >
+              <mat-icon class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">event_available</mat-icon>
+               <div>
+                       <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(145, 145, 145)">{{producto.creado|date:'dd/MM/yyyy'}}</h3>
+               </div>
+          </div>
+
+         </div>
+
+      <div style="margin-top:0px; margin-right: 10px;">
+
+          <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+              <mat-icon class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
+               <div>
+                      <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(145, 145, 145)">{{producto.imagen3}}</h3>
+               </div>
+          </div>
+      </div>
+
+
+      <div style="margin-top:0px; margin-right: 10px;">
+
+          <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px" >
+              <mat-icon class="mr-2"style="font-size:19px; color:gray">visibility</mat-icon>
+               <div>
+                      <h3  class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(145, 145, 145)">{{producto.vistas}}</h3>
+               </div>
+          </div>
+      </div>
+      </div>
+      <div>
+             <a  (click)="this.agregarVista(producto)" style="margin-top:-10px" href="http://157.230.228.106:3000/upload/{{this.cut(producto.imagen5)}}"  target="_blank" download="Archivo" class="mb-4 btn btn-sm btn-danger" >Descargar</a>
+          </div>
+
+</div>
+
+       </div>
+
+  </div>
+  <!-- <hr *ngIf="!this.loading">        -->
+
+
+  </div>

@@ -1,0 +1,46 @@
+
+.text4{
+
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden
+}
+
+
+.text3{
+
+
+display: -webkit-box;
+-webkit-line-clamp: 3;
+-webkit-box-orient: vertical;
+overflow: hidden
+}
+
+@media  (max-width: 600px)
+{
+/* .solores{ visibility:visible !important} */
+.mtCategoria{margin-top:130px!important;
+
+}
+
+}
+
+
+@media  (max-width: 993px)
+{
+/* .solores{ visibility:visible !important} */
+.dale{ display:block !important; }
+
+}
+
+
+
+@media  (max-width: 991px)
+{
+/* .solores{ visibility:visible !important} */
+.only1{ display:none !important}
+
+
+}

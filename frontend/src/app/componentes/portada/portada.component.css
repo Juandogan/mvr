@@ -1,0 +1,88 @@
+
+.imgPortada{object-fit:cover; margin-top:90px}
+.superPosicion{background-color: rgba(0, 0, 0, 0.699); position:relative; bottom:-1px;  margin-left:0px!important; margin-right:0px!important}
+.categoria{line-height: 30px; margin-bottom: -.5px;}
+.piePortada{display: flex; justify-content: left; margin-left:-5px; margin-top:-0px }
+.textoIcon{display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px}
+.textIcon2{display:flex ; align-items: flex-start; margin-top:-10px; margin-right: 5px}
+.fontColor{font-size:19px; color:white}
+.fechaStyle{font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(219, 219, 219)}
+.tituloEncima{
+
+  margin-top:4px;
+  font-size: 35px;
+  color: white;
+  text-shadow: 1px 0px 10px rgb(0, 0, 0);
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  letter-spacing: 1px;
+  line-height: 20px;
+    }
+
+.tituloEncima2{
+
+      margin-top: 450px;
+      letter-spacing: 1px;
+      color: rgb(238, 98, 98) ;
+      font-size: 14px;
+      text-shadow: 1px 0px 10px rgb(0, 0, 0);
+      margin-bottom: 5px;
+
+  }
+
+  .sombra{ -webkit-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);-moz-box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);box-shadow: 7px 10px 19px -4px rgba(0,0,0,0.75);  }
+
+  .tituloOver{margin-left:15px; margin-right:15px}
+
+  .subtitulo{color:wheat; font-size: 15px; margin-top:-25px; }
+
+
+
+
+
+    @media  (max-width: 1000px){
+      .correccion1{margin: 0px!important}
+      .fuenteSubTitulo{font-size: 14px;}
+      .correBottom{bottom:0!important}
+      .tituloEncima2{margin-top:453px!important}
+
+  }
+
+
+  .text1 {
+
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+
+@media  (max-width: 600px){
+  .correBottom{bottom:10px!important}
+  .fuenteSubTitulo{margin-top:-25px}
+  .fuenteTitulo{font-size: 30px; margin-top:-10px}
+  /* .fuenteSubTitulo{display:none} */
+  .paddingOff{padding:0px!important}
+  .fuenteSubTitulo{font-size: 13px; margin-top:-32px}
+  .tituloEncima{line-height: 30px!important;}
+  .tituloEncima2{margin-top:450px!important}
+  .tituloEncima2{margin-top:455px!important}
+
+
+
+  .text1 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 16px;
+}
+
+}
+
+@media  (max-width: 350px){
+.fuenteTitulo{font-size: 25px!important; margin-top:-10px}
+.subtitulo{font-size: 12px; margin-top:-35px; line-height: 13px;}
+.tituloEncima2{margin-top:464px!important}
+.logoMuseoseva{display: none;}
+}

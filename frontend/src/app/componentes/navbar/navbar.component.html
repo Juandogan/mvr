@@ -1,0 +1,82 @@
+
+
+<div class="fixed-top margenes fondo" style="top:-5px">
+
+  <div class="flex-container">
+     <img class="fixed logoMuseo" [ngClass]="{ imgScroll: this.crudService.scrolled }" style="margin-left:10px; transition: all 0.2s ease;" src="../../../assets/logo2.png">
+     <img class="fixed logomMuni" [ngClass]="{ imgScroll: this.crudService.scrolled }"style="margin-top: 25px;margin-right: 20px;transition: all 0.2s ease" src="../../../assets/logomuni.png">
+
+  </div>
+
+<div class="menu">
+                            <div class="itemMenu flex-container1 " [ngClass]="{ fondoNavbarDark: this.crudService.scrolled }">
+
+                               <!-- <mat-icon  [ngClass]="{ fondoIconMuseo: this.crudService.scrolled }" style="margin-left:10px; margin-right: 5px; margin-top:6px">museum</mat-icon> -->
+                              <a matRipple [matRippleColor]='color'
+                              [matRippleCentered]="centrado"
+                              [matRippleRadius]="radius"
+
+                              routerLink='/' >
+
+                                        <mat-icon matRipple [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" class="agregar600 navbarResponsive"style="margin-top:6px; margin-left:10px" (click)="this.crudService.inicioBarra()">museum</mat-icon>
+                                         <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" class="subtituloResposive2 font mr-1 quitar600"(click)="this.crudService.inicioBarra()" >Inicio</h3></a>
+
+                                 <a matRipple [matRippleColor]='color'
+                                 [matRippleCentered]="centrado"
+                                 [matRippleRadius]="radius"routerLink='/todos/Articulos' >
+                                       <mat-icon [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" class="agregar600 navbarResponsive"(click)="this.crudService.inicioBarra()" ><span class="material-icons-outlined">
+                                        article</span></mat-icon>
+                                       <h3 [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'" class="subtituloResposive2 font mr-1 quitar600" (click)="this.crudService.inicioBarra()" >Novedades</h3></a>
+
+                                       <a matRipple [matRippleColor]='color'
+                                       [matRippleCentered]="centrado"
+                                       [matRippleRadius]="radius"routerLink='/todos/Exposicion' >
+                                       <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'" class="agregar600 navbarResponsive"(click)="this.crudService.inicioBarra()">photo_camera</mat-icon>
+                                        <h3  [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'"  class="subtituloResposive2 font mr-1 quitar600"(click)="this.inicioBarra()" >Exposición</h3></a>
+
+                                        <a matRipple [matRippleColor]='color'
+                                        [matRippleCentered]="centrado"
+                                        [matRippleRadius]="radius" routerLink='/todos/Publicaciones' >
+                                       <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'"class="agregar600 navbarResponsive" (click)="this.crudService.inicioBarra()">account_balance</mat-icon>
+                                       <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'"  class="subtituloResposive2 font mr-1 quitar600"(click)="this.inicioBarra()" >Publicaciones</h3>
+                                      </a>
+
+                                      <a matRipple [matRippleColor]='color'
+                                      [matRippleCentered]="centrado"
+                                      [matRippleRadius]="radius" routerLink='/todos/Videos'>
+                                       <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" class="agregar600 navbarResponsive" (click)="this.crudService.inicioBarra()">play_circle_filled</mat-icon>
+                                       <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" class="subtituloResposive2 font mr-1 quitar600" (click)="this.inicioBarra()">Videos</h3>
+                                      </a>
+
+
+
+                                      <a matRipple [matRippleColor]='color'
+                                      [matRippleCentered]="centrado"
+                                      [matRippleRadius]="radius" routerLink='../museo'>
+                                       <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" class="agregar600 navbarResponsive" (click)="this.crudService.inicioBarra()">help</mat-icon>
+                                       <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" class="subtituloResposive2 font mr-1 quitar600" (click)="this.inicioBarra()">Museo</h3>
+                                      </a>
+
+
+
+                            </div>
+<div style="float:right; margin-top:-32px">
+  <img class='logoBarra imgMuseo' [ngClass]="{ logoBarra2: this.crudService.scrolled }" src="../../../assets/logobarra.JPG" alt="" style="margin-bottom: 0px; margin-top:-20px!important; margin-right: 10px;">
+<a href="https://web.facebook.com/museodelavidarural" target="_blank" style="color:black">
+  <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }"style="font-size:26px;margin-right:5px; margin-top:-3px">facebook</mat-icon>
+</a>
+<a href="https://www.youtube.com/channel/UCLzgeQS4y6a-NAgkzuXVdSA" target="_blank" style="color:black">
+  <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }"style="font-size:26px;margin-right:15px; margin-top:-3px">play_circle_outline</mat-icon>
+</a>
+
+
+</div>
+</div>
+</div>
+
+
+
+
+
+  <!-- <img [ngClass]="{ imgScroll: this.crudService.scroll } " src="../../../assets/logomuni.png" class="imgMuni mr-1 logoOut" style="margin-top:18px; float: right;"> -->
+

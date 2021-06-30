@@ -1,0 +1,289 @@
+
+
+
+<div style="margin-top:calc(6em + 4vw); margin-left:calc(-2em + 8vw); margin-right:calc(-2em + 8vw);">
+  <br>
+   <div>
+  <div style="margin-right: 7px; margin-left:7px">
+
+      <div *ngIf="this.loading" class="mtSeries">
+          <div align="center" style="margin:0px">
+              <img src="../../../assets/loading4.gif" width="100px" alt="">
+
+           </div>
+          </div>
+          <!-- <h1 *ngIf="!this.loading" style='color:brown'>| Publicaciones</h1> -->
+
+
+  <app-buscador style="margin-top:5px;" *ngIf="!this.loading" (buscar)=buscar($event)></app-buscador>
+  <div style="float:right; margin-top:15px; margin-right: 5px">
+  <button (click)="cerrarForm()"  *ngIf="!this.loading" class="btn btn-sm btn-danger mt-1"style="outline:none!important;  " data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap"> New </button>
+  </div>
+      <table *ngIf="!this.loading" class="table table-sm table-bordered" style="margin-top:-10px">
+          <thead style="background-color: gray; color:floralwhite">
+            <tr  >
+              <th scope="col">Categoría</th>
+              <th scope="col">Titulo</th>
+              <th scope="col" class="text-center">Acciones</th>
+              <th scope="col" class="text-center"><mat-icon>visibility</mat-icon></th>
+
+            </tr>
+
+          </thead>
+
+          <tbody *ngFor="let publi of productos |buscar:filtro_valor">
+
+
+
+
+
+
+            <tr>
+              <td >{{publi.categoria}}</td>
+              <td >{{publi.titulo | truncate: '50'}}</td>
+
+              <td class="text-center">
+                <a (click)="publiForm(publi)" > <span style="cursor:pointer; font-size:calc(1.5em + 0.7vw); color:brown" class="mr-2 material-icons" data-toggle="modal" data-target="#exampleModal1">delete</span></a>
+                <a (click)="editar(publi)"> <span style="cursor:pointer; font-size:calc(1.5em + 0.7vw); color:rgb(15, 167, 1)" data-toggle="modal" data-target="#exampleModal" class="material-icons" >create</span></a>
+
+                  </td>
+                  <td class="text-center">{{publi.vistas}}</td>
+            </tr>
+          </tbody>
+        </table>
+
+
+
+
+
+
+
+
+
+      </div>
+
+
+
+  <br><br><br>
+
+
+
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog" role="document" >
+      <div class="modal-content" >
+        <div class="modal-header">
+          <h1  class="modal-title"  style="margin:0px; padding: 0px!important; color:brown"  id="exampleModalLabel" >Nueva publicación</h1>
+          <button  type="button" class="close" data-dismiss="modal" aria-label="closed">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+            <form  #Form="ngForm" >
+
+                <h5 style ="margin-bottom:-4px"> Seleccione la categoría de su publicación</h5>
+                    <select id = 'categoria' (change) ="openEditor(categoria.value)" style="margin-top: 5px; width:100%"  type="text" class="form-control" name="categoria" #categoria="ngModel" [(ngModel)]="crudService.unProducto.categoria" placeholder="Categorias">
+
+                            <option value="Naturaleza"> Serie Naturaleza y ambiente</option>
+                            <option value="Pueblos Originarios"> Serie Pueblos orginarios</option>
+                            <option value="Historia rural"> Serie Historia Rural</option>
+                            <option value="Historias de pueblos"> Serie Historias de pueblos</option>
+                            <option value="Historias de vida y migraciones"> Serie Historia de vida y migraciones</option>
+                            <option value="Ruralidad"> Serie Ruralidad</option>
+                            <option value="Patrimonio Rural"> Serie Patrimonio Rural</option>
+                            <option value="Patrimonio y Educación"> Serie Patrimonio y Educacion</option>
+                            <option value="Reseñas"> Serie Reseñas </option>
+                            <option value="Articulos">Articulos </option>
+                            <option value="Videos">Videos</option>
+                            <option value="Actividades">Actividades - Agenda </option>
+                            <option value="Archivo">Archivo</option>
+                            <option value="Categoria">Categoria</option>
+                            <option value="Consultas">Consultas</option>
+                            <option value="Exposicion">Sala de exposicion</option>
+                            <option value="Muestra">Muestra</option>
+
+                    </select>
+
+                    <div>
+                      <input type="hidden" name="id" class="form-control "
+                      aria-describedby="TextoHelpBlock" #id="ngModel" [(ngModel)]="this.crudService.unProducto._id" >
+                    </div>
+
+
+  <div *ngIf='tituloShow'>
+      <div style="margin-top:10px">
+          <h5 style ="margin-bottom:-2px">Título</h5>
+    <input  name="titulo"  type="text" class="form-control"autocomplete="off"
+    aria-describedby="TextoHelpBlock" #titulo="ngModel" [(ngModel)]="this.crudService.unProducto.titulo">
+  </div>
+  </div>
+  <div *ngIf='subtituloShow'>
+                      <div style="margin-top:10px">
+                                  <h5 style ="margin-bottom:-2px">Subtitulo</h5>
+                            <input  name="subtitulo"  type="text" class="form-control"autocomplete="off"
+                            aria-describedby="TextoHelpBlock" #subtitulo="ngModel" [(ngModel)]="this.crudService.unProducto.subtitulo">
+                      </div>
+  </div>
+
+  <div *ngIf='textoShow'>
+          <div style="margin-top:5px">
+                      <h5 style ="margin-bottom:-2px">Texto</h5>
+                      <ckeditor rows="5" name="descripcion1" #description="ngModel" #description1="ngModel" [(ngModel)]="crudService.unProducto.descripcion1" placeholder="Parrafo"></ckeditor>
+         </div>
+
+  </div>
+  <div *ngIf='abstractShow'>
+      <div style="margin-top:5px">
+                  <h5 style ="margin-bottom:-2px">Abstrac</h5>
+                  <textarea rows="5"  style="margin-top: 25px; margin-top:-5px" class="form-control" aria-label="With textarea" autocomplete="off"
+                 name="descripcion1" #description="ngModel" #description1="ngModel" [(ngModel)]="crudService.unProducto.descripcion1" placeholder="Parrafo"></textarea>
+     </div>
+
+  </div>
+
+  <div *ngIf='imagenShow'>
+                  <div style="margin-top:20px">
+                      <h6 style ="margin-bottom:-2px">Imagen</h6>
+                      <input type="file"  style="width: 260px; overflow: none"  (change)="onFileChange($event); ">
+                      <button class="btn-sm btn btn-dark btn-upload ml-2" (click)="this.loading2=true" (click)="onUpload()">Subir</button>
+                      <div *ngIf="this.loading2">
+                             <div>
+                                <img src="../../../assets/loading4.gif"  width="50px" alt="">
+                            </div>
+
+                     </div>
+                   </div>
+
+                   <div *ngIf="this.loading3">
+                      <h6 style="color:green">✓ Archivo Subido</h6>
+                    </div>
+  </div>
+
+
+  <div *ngIf="archivoShow">
+        <div style="margin-top:0px">
+            <h6 style ="margin-bottom:-2px">Archivo</h6>
+            <input type="file"  style="width: 260px"  (change)="onFileChange($event); ">
+            <button class="btn-sm btn btn-dark btn-upload ml-2" (click)="this.loading4=true" (click)="onUpload2()">Subir</button>
+            <div *ngIf="this.loading4">
+                <div>
+                    <img src="../../../assets/loading4.gif"  alt="" width="50px">
+
+                </div>
+          </div>
+         </div>
+         <div *ngIf="this.loading5">
+            <h6 style="color:green">✓ Archivo Subido</h6>
+          </div>
+
+  </div>
+
+
+  <div *ngIf="fuenteImagenShow">
+      <div style="margin-top:10px">
+          <h5 style ="margin-bottom:-2px">Fuente Imagen</h5>
+          <input  name="imagen2"  type="text" class="form-control" autocomplete="off"
+           aria-describedby="TextoHelpBlock" #imagen2="ngModel" [(ngModel)]="this.crudService.unProducto.imagen2">
+      </div>
+    </div>
+
+
+  <div *ngIf="fuenteShow">
+      <div style="margin-top:10px">
+                  <h5 style ="margin-bottom:-2px">Link relacionado</h5>
+            <input  name="imagen1"  type="text" class="form-control" autocomplete="off"
+            aria-describedby="TextoHelpBlock" #imagen1="ngModel" [(ngModel)]="this.crudService.unProducto.imagen1">
+      </div>
+    </div>
+
+    <div *ngIf="autorShow">
+  <div style="margin-top:10px">
+      <h5 style ="margin-bottom:-2px">Autor</h5>
+  <input  name="imagen3"  type="text" class="form-control" autocomplete="off"
+          aria-describedby="TextoHelpBlock" #imagen4="ngModel" [(ngModel)]="this.crudService.unProducto.imagen3">
+  </div>
+  </div>
+
+  <!-- INPUT FECHA - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION3-->
+  <div *ngIf="fechaShow">
+          <div style="margin-top:10px">
+
+               <h5 style ="margin-bottom:-2px">Fecha: Inicio/cierre</h5>
+               <input  name="descripcion3"  autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+               #descripcion3="ngModel" [(ngModel)]="this.crudService.unProducto.descripcion3">
+
+           </div>
+  </div>
+
+
+  <!-- INPUT HORA - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION4-->
+  <div *ngIf="horaShow">
+      <div style="margin-top:10px">
+
+           <h5 style ="margin-bottom:-2px">Horario inicio/cierre</h5>
+           <input  name="descripcion4"  autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+           #descripcion4="ngModel" [(ngModel)]="this.crudService.unProducto.descripcion4">
+
+       </div>
+  </div>
+
+
+  <!-- INPUT LUGAR - ACTIVIDADES - EVENTOS  - VAR: DESCRIPCION4-->
+  <div *ngIf="lugarShow">
+      <div style="margin-top:10px">
+
+           <h5 style ="margin-bottom:-2px">Lugar / Ubicacion</h5>
+           <input  name="descripcion5" autocomplete="off" type="text" class="form-control" aria-describedby="TextoHelpBlock"
+           #descripcion5="ngModel" [(ngModel)]="this.crudService.unProducto.descripcion5">
+
+       </div>
+  </div>
+
+
+
+
+  <!-- <button type="button" class="btn btn-dark mt-4" >Save</button> -->
+
+  </form>
+
+
+
+
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"  (click)="agregarPublicacion()" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- Button trigger modal -->
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel1">Eliminar publicación</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h4>¿Esta completamente seguro que desea eliminar ésta publicación?</h4>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-danger "(click)='borrarProducto(this.publi2)'data-dismiss="modal" >Eliminar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+          <br>
+

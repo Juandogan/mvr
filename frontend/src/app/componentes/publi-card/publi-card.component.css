@@ -1,0 +1,29 @@
+
+.titulo{font-size: 170%;font-family: 'Yanone Kaffeesatz', sans-serif; line-height: 25px;}
+.subtitulo{margin-top:5px; line-height:18px; font-size: 14px;}
+img{border-radius: 5px; height: 280px; object-fit: cover; }
+
+.mr8{margin-right: -15px; }
+
+@media  (max-width: 1500px){
+  img{height: 80%;}
+.titulo{font-size: 130%; line-height: 20px;}
+  }
+
+
+
+@media  (max-width: 1200px){
+        img{height: 70%;}
+      }
+
+@media  (max-width: 1000px){
+
+}
+
+@media  (max-width: 800px){
+
+}
+@media  (max-width: 600px){
+
+}
+

@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap');
+
+.marginTop{margin-top:145px}
+.margenesArticulo{margin-top:100px;}
+
+.pm0{margin:0px!important; padding: 0px!important;}
+.categoria{font-size: 20px;font-family: 'Yanone Kaffeesatz', sans-serif; line-height: 25px; color:brown; margin-left:10px}
+
+.titulo{font-size: 40px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  line-height: 50px; margin-top:-10px;
+  margin-bottom:15px;
+  margin-left:10px;
+  margin-right:30px!important
+}
+
+.subtitulo{font-size: 22px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  line-height: 25px;
+  margin-top:-10px;
+   margin-left:10px;
+   letter-spacing: 0px;
+   margin-right:30px!important
+  }
+
+/* responsive text*/
+.IMGdesktop{margin-top:-10px; padding-right: 30px; margin-left:10px; height: 400px; object-fit: cover;}
+.nota{font-family: 'Roboto', sans-serif; font-size: 15px;line-height: 24px;margin-left:10px}
+
+.sombra-text{
+text-shadow: 1px 1px 1px rgb(221, 221, 221)
+}
+
+
+
+
+
+.capital::first-letter {
+
+  float: right;
+  font-family: 'Source Serif Pro', serif;
+  font-size: 310%;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-right: 10px;
+  line-height: 60%;
+  color:rgb(136, 136, 136)
+}
+
+
+
+
+
+.blink_me {
+
+  animation: blinker 1.2s alternate-reverse;
+  animation-delay: -0.5s;
+}
+
+
+@keyframes blinker {
+  90% {
+    opacity: 0;
+  }
+}
+@keyframes hideShow {
+  100%, 16.6%, 33.33%, 100% { width: 0; }
+  16.66%, 33.3% { width: auto; }
+}
+
+
+@media  (max-width: 700px)
+{
+p{margin-left:10px!important; margin-right: -10px!important;}
+img{margin-left:0px!important; margin-right: -20px!important;}
+}
+
+@media  (max-width: 800px)
+{
+ .marginTop{margin-top: 130px;}
+ .titulo{font-size: 30px; line-height: 30px; margin-top:-5px;}
+ .subtitulo{font-size: 17px; line-height: 19px;}
+ .categoria{font-size: 15px!important; margin-bottom: 2px }
+ .IMGdesktop{display:none}
+ .mobilePoner{display: inline-block!important;margin-right: 5px!important;}
+}

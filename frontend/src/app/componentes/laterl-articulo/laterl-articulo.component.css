@@ -1,0 +1,21 @@
+
+.subtitulo{font-size: 20px;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+   line-height: 24px; margin-top:8px;
+    margin-bottom:20px;
+    margin-left:5px; margin-right:5px;
+    margin-top:-12px;
+    color:brown;
+  }
+  .categoria{font-family: 'Yanone Kaffeesatz', sans-serif;
+    line-height: 24px; font-size: 15px ;
+   }
+
+  .parrafo{
+    margin-top:-20px;
+    margin-left:5px
+  }
+
+  .imagen{ width:95%; height:180px; border-radius: 10px; margin-top:-10px}
+
+  .categoria{margin-left:5px; color:black}
