@@ -13,18 +13,21 @@ res.json(productos);
 
 productosCtrl.newProductos = async(req,res) => {
     const productos = new Productos({
-        
-        fecha:req.body.fecha,
-        titulo:req.body.titulo,
-        subtitulo:req.body.subtitulo,
-        descripcion:req.body.descripcion,
-        imagen1:req.body.imagen1,
-        imagen2:req.body.imagen2,
-        imagen3:req.body.imagen3,
-        categoria:req.body.categoria,
-        likes:req.body.likes,
-        vistas:req.body.vistas
-
+       titulo: req.body.titulo,
+       subtitulo: req.body.subtitulo,
+       categoria: req.body.categoria,
+       descripcion1: req.body.descripcion1,
+       descripcion2: req.body.descripcion2,
+       descripcion3: req.body.descripcion3,
+       descripcion4: req.body.descripcion4,
+       descripcion5: req.body.descripcion5,
+       imagen1: req.body.imagen1,       
+       imagen2: req.body.imagen2,       
+       imagen3: req.body.imagen3,       
+       imagen4: req.body.imagen4,       
+       imagen5: req.body.imagen5,       
+       fecha: req.body.fecha,
+       vistas: req.body.vistas,
 
     });
        await productos.save();
@@ -40,20 +43,21 @@ productosCtrl.newProductos = async(req,res) => {
 
 productosCtrl.modificarProducto = async (req,res) => {
     const { id } = req.params;
-    const producto = { 
-        fecha:req.body.fecha,
-        titulo:req.body.titulo,
-        subtitulo:req.body.subtitulo,
-        descripcion:req.body.descripcion,
-        imagen1:req.body.imagen1,
-        imagen2:req.body.imagen2,
-        imagen3:req.body.imagen3,
-        categoria:req.body.categoria,
-        likes:req.body.likes,
-        vistas:req.body.vistas,
-        tituloImagen: req.body.tituloImagen
-                               
-
+    const producto = {  titulo: req.body.titulo,
+        subtitulo: req.body.subtitulo,
+        categoria: req.body.categoria,
+        descripcion1: req.body.descripcion1,
+        descripcion2: req.body.descripcion2,
+        descripcion3: req.body.descripcion3,
+        descripcion4: req.body.descripcion4,
+        descripcion5: req.body.descripcion5,
+        imagen1: req.body.imagen1,       
+        imagen2: req.body.imagen2,       
+        imagen3: req.body.imagen3,       
+        imagen4: req.body.imagen4,       
+        imagen5: req.body.imagen5,       
+        fecha: req.body.fecha,
+        vistas: req.body.vistas
     };
     
        await Productos.findByIdAndUpdate(id, {$set: producto}, {new: true});
@@ -72,19 +76,19 @@ productosCtrl.deleteProducto = async (req,res) => {
 productosCtrl.nuevoPago = async (req,res) => {
     var { id } = req.params
      id = Number(id);
-     mercadopago.configure({access_token: 'TEST-5952899216905685-020218-5db2793d7558989dbee92f29a816339a-205944115'});
+     mercadopago.configure({access_token: 'TEST-422141643250773-060218-f9f1edbfaa14164e44c3b4b0f71287ae-26856840'});
    
   let preference = { 
 
     back_urls: {
-        success: "http://192.168.43.55:4200/mercadopagofin/",
-        failure: "http://192.168.43.55:4200/mercadopagofin/",
-        pending: "http://192.168.43.55:4200/mercadopagofin/"
+        success: "http://192.168.43.55:4200/modulocompras/comprasfin/",
+        failure: "http://192.168.43.55:4200/modulocompras/comprasfin/",
+        pending: "http://192.168.43.55:4200/modulocompras/comprasfin/"
     },
     auto_return: "approved",
       
     items: [
-        { title: 'Jethro Caps ',
+        { title: 'Resto La Malvada Delivery',
           unit_price: (id),
           currency_id: 'ARS',
           quantity: 1,

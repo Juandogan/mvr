@@ -1,11 +1,6 @@
 const express = require ('express'); 
 const app = express(); // API
 
-
-//https
-const fs = require('fs');
-const https = require('https');
-
 const path = require ('path')
 const bodyParser = require ('body-parser');
 const multipart = require ('connect-multiparty');
@@ -108,16 +103,9 @@ app.get('*', function(req, res, next)
 
 
 
-const PUERTO = 3000 ;
+
 
 // Starting server  
-// https.createServer({
-//     cert: fs.readFileSync('Certificate.crt'),
-//     key: fs.readFileSync('Private.key')
-//   },app).listen(PUERTO, function(){
-//    console.log('Servidor https correindo en el puerto 443');
-// });
-
 app.listen(app.get('port'), () => {console.log("Puerto escuchando en puerto: ", app.get('port'))});    
        
 

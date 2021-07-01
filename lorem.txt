@@ -1,0 +1,41 @@
+
+
+***************************+***************************+
+MUseodelavida12a - LINUX
+
+157.230.228.106
+
+***************************+***************************+
+
+Producion Puesta
+
+
+
+1 .- copiar dos carptas front y server en la misma carpeta en el escritorio
+2 entrar al backend y cortar el contenido y ponerlo fuera un nivel hacia atras
+y se borra el backend
+
+3.- crear carpeta - client
+
+entrar al frontend y le hacermos un ng build --prod
+
+
+configurar rutas para que cargue el frontend
+
+var path = require('path')
+
+middleware
+app.use('/',expres.static('client', {redirect:false})));
+
+
+app.get('*',function (req,res,next){res.sendFile(path.resolve('client/index.html'))} )
+
+
+
+echo "# asas" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/Juandogan/asas.git
+git push -u origin main
