@@ -19,7 +19,7 @@ export class ArticuloCardComponent implements OnInit{
   ngOnInit(){
 
     this.stringIM = this.data?.imagen4.slice(8)
-    this.stringIM = "http://www.museodelavidarural.com/upload/" +  this.stringIM
+    this.stringIM = "https://www.museodelavidarural.com/upload/" +  this.stringIM
 
 
   }

@@ -13,55 +13,11 @@ var fs = require('fs');
 var https = require('https');
 
 
-//var body_parser = require('body-parser');
-// CREATE SERVER socket.IO
-const serverSocketIo = express(); 
 const multiPartMiddleware = multipart({
     uploadDir: './subidas'
 
 });
-
-
-
-const serverHttp = require('http').Server(serverSocketIo);
-const io = require('socket.io')(serverHttp);
-serverHttp.listen(  3001, () =>{
-console.log('***** SocketIO port: 3001')
-        
-    })
-         
     
-// CONFIG SOCKET.IO     
-// const ordenSocketIo=[]; 
-// const ordenStateMongo=[];
-       
-// io.on('connection', function(socket){  
-//         socket.on('send-cxn', function(data){  
-//         socket.emit('text-event',ordenSocketIo)     
-//         socket.broadcast.emit('text-event',ordenSocketIo)
-//    })  
-         
-//         socket.on('send-message', function(data){
-//         ordenSocketIo.push(data);
-//         socket.emit('text-event',ordenSocketIo)
-//         socket.broadcast.emit('text-event',ordenSocketIo)
-//     })
-     
-//     socket.on('send-messageEstado', function(index,estado){
-//         ordenSocketIo.reverse()
-//             for(var x = 0 ; x < ordenSocketIo.length;  x++ ) {
-              
-//             ordenSocketIo[index].estado = estado
-            
-//         }
-//         ordenSocketIo.reverse()
-//         socket.emit('text-event',ordenSocketIo)
-//         socket.broadcast.emit('text-event',ordenSocketIo)
-//     })
-   
-            
-// })      
-  
 
     
 // CREATE API
@@ -77,9 +33,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended : true
 }));
-//app.use(body_parser.urlencoded({extended:true}));
-//app.use(cors({origin:'http://localhost:4200'}));
-//app.use(cors({origin:'http://167.99.0.153:4200'}));
+
 
 app.post('/upload', multiPartMiddleware, (req,res)=>{
     res.json(req.files['archivos'].path    
@@ -102,7 +56,7 @@ app.get('*', function(req, res, next)
 }) 
 
 
-const PUERTO = 3005 ;
+const PUERTO = 443 ;
 
 // Starting server  
  https.createServer({

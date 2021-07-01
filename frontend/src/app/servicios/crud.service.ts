@@ -11,7 +11,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class CrudService {
 
-  readonly URL_API  = "http://www.museodelavidarural.com/productos";
+  readonly URL_API  = "https://www.museodelavidarural.com/productos";
 
   unProducto:Producto;
   productos: Producto[] =[];
