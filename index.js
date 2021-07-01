@@ -9,8 +9,8 @@ const morgan = require ('morgan'); // middleware Morgan muestra las peticiones e
 const cors = require ('cors');     // autorizacion de cxn entre servidores
 const { mongoose } = require('./database'); //mongodb
 
-//var fs = require('fs');
-//var https = require('https');
+var fs = require('fs');
+var https = require('https');
 
 
 //var body_parser = require('body-parser');
@@ -32,35 +32,35 @@ console.log('***** SocketIO port: 3001')
          
     
 // CONFIG SOCKET.IO     
-const ordenSocketIo=[]; //  recibe data desde comunicacion.serivce.ts (funciones emit(), liten()) son llamadas x productos.component funcion: formEdit()                                                    
-const ordenStateMongo=[];
+// const ordenSocketIo=[]; 
+// const ordenStateMongo=[];
        
-io.on('connection', function(socket){    // abre cnx no recibe data
-        socket.on('send-cxn', function(data){  //Llega pedido desde            
-        socket.emit('text-event',ordenSocketIo)     
-        socket.broadcast.emit('text-event',ordenSocketIo)
-   })  
+// io.on('connection', function(socket){  
+//         socket.on('send-cxn', function(data){  
+//         socket.emit('text-event',ordenSocketIo)     
+//         socket.broadcast.emit('text-event',ordenSocketIo)
+//    })  
          
-        socket.on('send-message', function(data){
-        ordenSocketIo.push(data);
-        socket.emit('text-event',ordenSocketIo)
-        socket.broadcast.emit('text-event',ordenSocketIo)
-    })
+//         socket.on('send-message', function(data){
+//         ordenSocketIo.push(data);
+//         socket.emit('text-event',ordenSocketIo)
+//         socket.broadcast.emit('text-event',ordenSocketIo)
+//     })
      
-    socket.on('send-messageEstado', function(index,estado){
-        ordenSocketIo.reverse()
-            for(var x = 0 ; x < ordenSocketIo.length;  x++ ) {
+//     socket.on('send-messageEstado', function(index,estado){
+//         ordenSocketIo.reverse()
+//             for(var x = 0 ; x < ordenSocketIo.length;  x++ ) {
               
-            ordenSocketIo[index].estado = estado
+//             ordenSocketIo[index].estado = estado
             
-        }
-        ordenSocketIo.reverse()
-        socket.emit('text-event',ordenSocketIo)
-        socket.broadcast.emit('text-event',ordenSocketIo)
-    })
+//         }
+//         ordenSocketIo.reverse()
+//         socket.emit('text-event',ordenSocketIo)
+//         socket.broadcast.emit('text-event',ordenSocketIo)
+//     })
    
             
-})      
+// })      
   
 
     
@@ -102,6 +102,15 @@ app.get('*', function(req, res, next)
 }) 
 
 
+const PUERTO = 3005 ;
+
+// Starting server  
+ https.createServer({
+     cert: fs.readFileSync('museodelavidarural.com.crt'),
+     key: fs.readFileSync('museodelavidarural.com.key') 
+   },app).listen(PUERTO, function(){
+    console.log('Servidor https correindo en el puerto 443');
+ });
 
 
 
