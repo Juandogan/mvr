@@ -5,13 +5,12 @@
   <div class="flex-container">
      <img class="fixed logoMuseo" [ngClass]="{ imgScroll: this.crudService.scrolled }" style="margin-left:10px; transition: all 0.2s ease;" src="../../../assets/logo2.png">
      <img class="fixed logomMuni" [ngClass]="{ imgScroll: this.crudService.scrolled }"style="margin-top: 25px;margin-right: 20px;transition: all 0.2s ease" src="../../../assets/logomuni.png">
-
   </div>
 
 <div class="menu">
                             <div class="itemMenu flex-container1 " [ngClass]="{ fondoNavbarDark: this.crudService.scrolled }">
 
-                                <mat-icon class="quitar600" [ngClass]="{ fondoIconMuseo: this.crudService.scrolled }" style="margin-left:10px; margin-right: 5px; margin-top:6px">museum</mat-icon> 
+                                <!-- <mat-icon class="quitar600" [ngClass]="{ fondoIconMuseo: this.crudService.scrolled }" style="margin-left:10px; margin-right: 5px; margin-top:6px">museum</mat-icon>  -->
                                <div style="margin-left:10px!important">
                               <a matRipple [matRippleColor]='color'
                               [matRippleCentered]="centrado"
@@ -20,7 +19,7 @@
                               routerLink='/' >
 
                                         <mat-icon matRipple [ngClass]="{ fondoIcon: this.crudService.scrolled }" [routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" class="agregar600 navbarResponsive as"style="margin-top:6px;" (click)="this.crudService.inicioBarra()">museum</mat-icon>
-                                         <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" class="subtituloResposive2 font mr-1 quitar600"(click)="this.crudService.inicioBarra()" style="margin-left:-5px!important" >Inicio</h3></a>
+                                         <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'" [routerLinkActiveOptions]="{exact:  true}" class="subtituloResposive2 font mr-1 quitar600"(click)="this.crudService.inicioBarra()" style="margin-left:10px!important" >Inicio</h3></a>
                                         </div>
                                  <a matRipple [matRippleColor]='color'
                                  [matRippleCentered]="centrado"

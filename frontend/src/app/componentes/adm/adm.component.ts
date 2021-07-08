@@ -189,7 +189,7 @@ this.crudService.unProducto.categoria = value
 
 
             break;
-            case 'Reseñas':
+         case 'Reseñas':
          this.cerrarForm();
          this.tituloShow=true;
          this.abstractShow=true;
@@ -201,7 +201,7 @@ this.crudService.unProducto.categoria = value
 
             break;
  
-          case 'Naturaleza':
+       case 'Naturaleza':
        this.cerrarForm();
        this.tituloShow=true;
        this.abstractShow=true;
@@ -212,33 +212,7 @@ this.crudService.unProducto.categoria = value
 
 
           break;
-      case 'Actividades':
-            this.cerrarForm();
-       this.tituloShow=true;
 
-       this.textoShow=true;
-      this.imagenShow=true;
-
-       this.fuenteImagenShow=true;
-
-       this.fechaShow=true;
-       this.horaShow=true;
-       this.lugarShow=true;
-
-          break;
-    case 'Archivo':
-    this.cerrarForm();
-      this.tituloShow=true;
-   this.subtituloShow=true;
-   this.textoShow=true;
-   this.imagenShow=true;
-   this.fuenteImagenShow=true;
-   this.fuenteShow=true;
-     this.autorShow=true;
-
-
-
-          break;
       case 'Artículos':
       this.cerrarForm();
         this.tituloShow=true;
@@ -296,7 +270,7 @@ this.crudService.unProducto.categoria = value
 
             break;
 
-        case 'Historia Rural':
+        case 'Historia Rural y de los pueblos':
         this.cerrarForm();
         this.tituloShow=true;
         this.abstractShow=true;
@@ -369,33 +343,7 @@ this.crudService.unProducto.categoria = value
            this.fuenteImagenShow=true;
            this.autorShow=true;
 
-
-
-              break;
-              case 'Muestras':
-                this.cerrarForm();
-                this.tituloShow=true;
-                this.abstractShow=true;
-                this.imagenShow=true;
-                this.archivoShow=true;
-                this.fuenteImagenShow=true;
-                this.autorShow=true;
-
-
-
-                   break;
-              case 'Patrimonio y Educación':
-              this.cerrarForm();
-              this.tituloShow=true;
-              this.abstractShow=true;
-              this.imagenShow=true;
-              this.archivoShow=true;
-              this.fuenteImagenShow=true;
-              this.autorShow=true;
-
-
-
-                 break;
+                           break;
 
             case 'Naturaleza':
          this.cerrarForm();
@@ -435,7 +383,7 @@ this.crudService.unProducto.categoria = value
             break;
 
 
-      case 'Exposicion':
+      case 'Exposición':
       this.cerrarForm();
       this.tituloShow=true;
       this.subtituloShow=true;
@@ -445,7 +393,7 @@ this.crudService.unProducto.categoria = value
       this.autorShow=true;
 
          break;
-        case 'Articulos':
+        case 'Artículos':
         this.cerrarForm();
           this.tituloShow=true;
          this.subtituloShow=true;
@@ -516,6 +464,7 @@ this.crudService.unProducto.categoria = value
     {
     this.crudService.modificarProducto(this.crudService.unProducto)
     .subscribe(res => {
+      this.crudService.unProducto = new Producto;
 
         this.crudService.snack('Modificado!')
 
@@ -528,7 +477,10 @@ this.crudService.unProducto.categoria = value
 
 
 
-         this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })
+         this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) 
+          this.crudService.unProducto = new Producto;
+        })
+         this.pedirProductos()
 
   this.crudService.snack('Guardado!')
 
@@ -586,8 +538,6 @@ this.crudService.unProducto.categoria = value
    console.log(producto._id)
     this.crudService.deleteProducto(producto._id).subscribe(res => console.log(res));
     this.crudService.snack('Eliminado!')
-
-
      this.pedirProductos()
 
 };

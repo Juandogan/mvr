@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
-.fondoIcon{color:white!important}
+.fondoIcon{color:white!important; }
 .fondoIconMuseo{color:white!important}
 .fondoNavbarDark{background-color: rgb(0, 0, 0)!important; border:none!important; border-radius: 5px!important; }
 .imgScroll{margin-top: -110px!important;}
