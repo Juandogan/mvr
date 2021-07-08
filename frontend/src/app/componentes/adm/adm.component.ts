@@ -102,7 +102,7 @@ this.crudService.unProducto.categoria = value
           break;
 
 
-      case 'Exposicion':
+      case 'Exposición':
       this.cerrarForm();
       this.tituloShow=true;
       this.subtituloShow=true;
@@ -200,18 +200,7 @@ this.crudService.unProducto.categoria = value
 
 
             break;
-            case 'Patrimonio y Educación':
-            this.cerrarForm();
-            this.tituloShow=true;
-            this.abstractShow=true;
-            this.imagenShow=true;
-            this.archivoShow=true;
-            this.fuenteImagenShow=true;
-            this.autorShow=true;
-
-
-               break;
-
+ 
           case 'Naturaleza':
        this.cerrarForm();
        this.tituloShow=true;
@@ -250,7 +239,7 @@ this.crudService.unProducto.categoria = value
 
 
           break;
-      case 'Articulos':
+      case 'Artículos':
       this.cerrarForm();
         this.tituloShow=true;
        this.subtituloShow=true;
