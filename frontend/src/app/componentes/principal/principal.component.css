@@ -6,6 +6,8 @@
     border-bottom: 1px solid gainsboro;
   }
 
+  
+a{text-decoration: none;}
   .marginResposive{margin-top:250px}
   .marginB{margin-top:-80px!important; }
   .tituloBarra{color:rgba(53, 53, 53, 0.877); font-family: 'Yanone Kaffeesatz', sans-serif;
@@ -21,6 +23,8 @@
   border-bottom: 1px solid gainsboro;
    margin-top:-65px}
 
+   .separadorVideo{margin-bottom: 35px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;
+    border-bottom: 1px solid gainsboro; margin-top:20px}
 
 .mostrar600{display:none}
 .cardExpo{margin-top:-80px!important}
@@ -137,6 +141,12 @@
   -webkit-align-self: auto;
   -ms-flex-item-align: auto;
   align-self: auto;
+  }
+
+  @media  (max-width: 1000px){
+  .separadorPubli{margin-top:0px}
+  .separadorVideo{margin-top:0px}
+  .marginB{margin-top:0px!important; }
   }
 
   @media  (max-width: 620px){

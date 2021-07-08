@@ -1,4 +1,4 @@
-import { Component, OnInit,HostListener } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import { Location } from '@angular/common';
 import { CrudService } from '../../servicios/crud.service';
@@ -9,13 +9,17 @@ import { Producto } from '../../modelos/productos';
   templateUrl: './articulo.component.html',
   styleUrls: ['./articulo.component.css']
 })
+
+
 export class ArticuloComponent implements OnInit {
+
+
 
   @HostListener("scroll", ['$event'])
   public nota: Producto;
-  public loading:boolean = true;
+  public loading:any;
   public notas:any
-
+  public loader:any
   constructor(
     private ruta:ActivatedRoute,
     public crudService:CrudService,
@@ -29,22 +33,24 @@ export class ArticuloComponent implements OnInit {
     this.ruta.params.subscribe(params=>{params['_id'];
 
     this.crudService.getOneCard(params['_id'])
-    .subscribe(res=> {this.nota = res as Producto; this.loading =false ;
+    .subscribe(res=> {this.nota = res as Producto; 
+   
       window.scrollTo(0,0);
-
+    this.loader = false;
     }
    );
    })
   }
 
   ngOnInit(): void {
+    this.loader=true
     this.crudService.scrolled =false
 
 
 
       this.crudService.getProductos().subscribe(res=>{
-      this.notas = res as Producto; this.loading=false;
-
+      this.notas = res as Producto;
+ 
       })
 
   }
@@ -75,5 +81,6 @@ export class ArticuloComponent implements OnInit {
 
 
   };
+
 
 }

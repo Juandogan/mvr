@@ -33,15 +33,17 @@ export class TodosComponent implements OnInit  {
     this.categoriaString = this.categoria
     window.scrollTo(0,0);
     console.log(this.categoria)
-    if(this.categoria === "Articulos"){this.categoriaString = "Artículos - Todos"; }
+    if(this.categoria === "Articulos"){this.categoriaString = "Artículos - Novedades"; }
 
     if(this.categoria === "Exposicion"){
       this.categoriaString = "Exposición de Objetos"}
 
       if(this.categoria === "Publicaciones"){
-        this.cambioPlantilla = false} else {this.cambioPlantilla = true}
+        this.cambioPlantilla = false;
+        this.categoriaString = 'Publicaciones en PDF'
 
-
+      } else {this.cambioPlantilla = true}
+          
 
         })
 

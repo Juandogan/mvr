@@ -20,8 +20,12 @@
  <div  style="margin-top:20px; margin-bottom: 10px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;" >
   <div class="flex-container margin600">
 
-   <mat-icon style="margin-top:6px; margin-left:0px; color:brown"> error</mat-icon>
-  <h2 class="tituloBarra" style="color:rgb(56, 56, 56)"> Últimas Novedades (19)</h2>
+
+   <mat-icon style="margin-top:6px; margin-left:0px; color:brown">article</mat-icon>
+   <a routerLink='/todos/Artículos' style="z-index: 100;">
+  <h2 class="tituloBarra" style="color:rgb(56, 56, 56)"> Últimas Novedades<span style="color:brown">- Ver más</span></h2>
+</a>
+  
 
    </div>
 
@@ -38,7 +42,7 @@
   <!-- desktop -->
   <br><br>
   <div class="row pm0 ">
-    <div *ngFor="let producto of productos |filtro:'Articulos'|filtrox4:4 "
+    <div *ngFor="let producto of productos |filtro:'Artículos'|filtrox4:4 "
     class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 ocultar600 ;
     ">
       <!-- <img *ngIf="!this.crudService.loading" src="../../../assets/cabecera.png" alt="" style=" margin-left:40px; width: 70%; object-fit: cover;"> -->
@@ -53,7 +57,7 @@
 
 <!-- mibile -->
 <div class="row pm0" style="margin-left:15px!important; margin-right: 15px!important; " >
-  <div *ngFor="let producto of productos |filtro:'Articulos'|filtrox4:4 "
+  <div *ngFor="let producto of productos |filtro:'Artículos'|filtrox4:4 "
    class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding: 0px; padding-left:10px; margin-bottom:-0px">
  <app-articulo-card-desktop [data]="producto" ></app-articulo-card-desktop>
  </div>
@@ -74,8 +78,10 @@
 <div class="separadorPubli" >
 <div class="flex-container margin600">
 
-<mat-icon style="margin-top:6px; margin-left:0px; color:brown"> photo_camera</mat-icon>
-<h2 class="tituloBarra " > Publicaciones Archivos  (19)</h2>
+<mat-icon style="margin-top:6px; margin-left:0px; color:brown">account_balance</mat-icon>
+<a routerLink='/todos/Publicaciones' style="z-index: 100;">
+<h2 class="tituloBarra " > Publicaciones Archivos <span style="color:brown">- Ver más</span></h2>
+</a>
 
 </div>
 
@@ -116,14 +122,16 @@
   <div class="separador1" >
     <div class="flex-container" >
     <mat-icon style="margin-top:6px; margin-left:14px; color:brown">photo_camera</mat-icon>
+    <a routerLink='/todos/Exposición' style="z-index: 100;">
     <h2 style=" font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 22px;
-    margin-left: 5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px; " > Exposición de objetos</h2>
+    margin-left: 5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px;color:black"> Exposición de objetos <span style="color:brown">- Ver más</span></h2>
+    </a>
   </div>
   </div>
 
   <div style="background-color:rgba(255, 255, 255, 0);">
     <div class="row pm0" style="margin-right:20px!important;">
-      <div *ngFor="let producto of productos |filtro:'Exposicion'|filtrox4:4"   class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pm0 cardExpo"  >
+      <div *ngFor="let producto of productos |filtro:'Exposición'|filtrox4:4"   class="col-sm-12 col-md-6 col-lg-3 col-xl-3 pm0 cardExpo"  >
      <app-articulo-card [data]="producto"></app-articulo-card>
      </div>
 
@@ -131,11 +139,13 @@
 
 
 <br>
-  <div class="marginB "style="margin-bottom: 35px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro; margin-top:20px" >
+  <div class="marginB separadorVideo" >
     <div class="flex-container" >
     <mat-icon style="margin-top:6px; margin-left:14px; color:brown">photo_camera</mat-icon>
+    <a routerLink='/todos/Videos' style="z-index: 100;">
     <h2 style=" font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 22px; margin-left:
-    5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px" >Videos</h2>
+    5px; margin-bottom: 0px;  border-radius: 1px; margin-top:3px; color:black" >Videos <span style="color: brown;">- Ver más</span></h2>
+    </a>
   </div>
   </div>
 

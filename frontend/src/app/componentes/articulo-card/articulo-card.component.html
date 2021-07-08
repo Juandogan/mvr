@@ -7,7 +7,7 @@
              <h6 style="font-size: 15px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown; margin-left:3px">#{{this.data?.categoria}}</h6>
             <div style="margin-top:-10px">
 
-              <a routerLink="../../articulos/{{data?._id}}">
+              <a routerLink="../../articulos/{{data?._id}}" (click)='this.agregarVista(data)' > 
 
                 <h5 class="titulo text1 mt-2"   >{{this.data?.titulo}}</h5> </a>
                 <small class="text2 subtitulo" style="margin-bottom:0px" >{{this.data?.subtitulo}}</small>

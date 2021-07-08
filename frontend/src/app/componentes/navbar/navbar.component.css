@@ -1,35 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
-
 .fondoIcon{color:white!important}
 .fondoIconMuseo{color:white!important}
 .fondoNavbarDark{background-color: rgb(0, 0, 0)!important; border:none!important; border-radius: 5px!important; }
-.imgScroll{
-
-margin-top: -110px!important;
-
-}
-
-
+.imgScroll{margin-top: -110px!important;}
 .navbarResponsive{
     color: rgb(0, 0, 0);
     margin-top:6px;
     margin-left: 10px;}
-
 .logoMuseo{width: 300px; margin-top:0px}
-
 .logomMuni{width: 170px; }
-
 hr{margin-top: 5px; }
-
 h3{font-size: 17px!important;}
-
 .font{font-family: 'Yanone Kaffeesatz', sans-serif;
   color:rgb(34, 34, 34); font-size:22px; margin-top:7px; margin-left: 10px;
   letter-spacing: 1px;
 }
-
-
 .logoBarra{display: none;}
 .logoBarra2{display: inline;}
 .fondo{ background-color: rgb(255, 255, 255);}
@@ -39,20 +25,18 @@ h3{font-size: 17px!important;}
 .menu{height: 40px;  margin-top:10px; background-color: rgb(255, 255, 255); }
 
 .itemMenu{display:flex ; align-items: flex-start; margin-top:-5px;
-  border:1px solid rgb(223, 223, 223);
-   border-left: none; border-right: none; height: 40px;
+          border:1px solid rgb(223, 223, 223);
+          border-left: none; border-right: none; height: 40px;
+          }
 
-  }
+.activo{
+        transition: all 0.3s ease-in-out;
+        color:rgb(199, 83, 83)!important;  /*Color texto-activo*/
+        }
 
-   .activo{
-    transition: all 0.3s ease-in-out;
-    color:rgb(199, 83, 83)!important;  /*Color texto-activo*/
-     font-size:20px!important;
-   }
+a{text-decoration: none;}
 
-   a{text-decoration: none;}
-
-   .agregar600{display:none;}
+.agregar600{display:none;}
 
 .flex-container {
   display: -ms-flexbox;
@@ -124,6 +108,8 @@ h3{font-size: 17px!important;}
   .imgMuseo{display:none!important}
   .activo{font-size:24px!important;}
   .fondoNavbarDark{ border-radius: 0px!important; }
+    .as{margin-left:5px!important }
+  
 }
 
 .flex-container1 {

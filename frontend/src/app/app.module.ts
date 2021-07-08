@@ -42,6 +42,7 @@ import { BuscadorComponent } from './componentes/buscador/buscador.component';
 import {MatInputModule} from '@angular/material/input';
 import { BuscarPipe } from './pipes/buscar.pipe';
 import { PublicacionesComponent } from './componentes/publicaciones/publicaciones.component';
+import { SinpubliComponent } from './componentes/sinpubli/sinpubli.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +71,8 @@ import { PublicacionesComponent } from './componentes/publicaciones/publicacione
     AdmComponent,
     BuscadorComponent,
     BuscarPipe,
-    PublicacionesComponent
+    PublicacionesComponent,
+    SinpubliComponent
   ],
   imports: [
     BrowserModule,

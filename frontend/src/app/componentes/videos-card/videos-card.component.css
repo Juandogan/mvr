@@ -26,11 +26,12 @@ a{color:rgb(0, 0, 0)}
     }
 
 @media  (max-width: 1000px){
-  img{height: 2z00px!important;}
+  img{height: 200px!important;}
 
   }
   @media  (max-width: 770px){
     img{height: 200px!important;}
+    .principal{margin-bottom:-0px!important}
 
     }
 

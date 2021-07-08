@@ -34,7 +34,7 @@ this.loader=true
     this.crudService.getProductos().subscribe(res =>{
     this.crudService.productos = res as Producto[];  // guardo resultados de la peticion en el servicio
     this.productos = res as Producto[]; // guardo resultados de la peticion en variable productos del este componente.
-
+console.log(this.productos)
     this.loader=false
 
     });//fin de subscribe

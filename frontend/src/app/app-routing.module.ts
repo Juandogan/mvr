@@ -7,6 +7,7 @@ import { MuestraComponent } from '../app/componentes/muestra/muestra.component'
 import { MuseoComponent} from '../app/componentes/museo/museo.component'
 import { VideosTodosComponent} from '../app/componentes/videos-todos/videos-todos.component'
 import { AdmComponent} from '../app/componentes/adm/adm.component'
+import { SinpubliComponent } from './componentes/sinpubli/sinpubli.component';
 
 const routes: Routes = [
 
@@ -18,6 +19,9 @@ const routes: Routes = [
   {path:'todos/:categoria', component: VideosTodosComponent },
   {path:'muestra', component: MuestraComponent },
   {path:'adm', component: AdmComponent },
+  {path:'sin', component: SinpubliComponent },
+
+
 
 
 ];

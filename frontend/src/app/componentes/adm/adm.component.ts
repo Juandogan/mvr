@@ -113,7 +113,7 @@ this.crudService.unProducto.categoria = value
 
          break;
 
-         case 'Muestra':
+         case 'Historia rural y de los pueblos':
           this.cerrarForm();
           this.tituloShow=true;
           this.subtituloShow=true;
@@ -125,7 +125,7 @@ this.crudService.unProducto.categoria = value
              break;
 
 
-      case 'Historia Rural':
+      case 'Historia Rural y de los pueblos':
       this.tituloShow=true;
       this.abstractShow=true;
       this.imagenShow=true;
@@ -139,7 +139,7 @@ this.crudService.unProducto.categoria = value
 
 
 
-      case 'Historias de pueblos':
+      case 'Misceláneas':
       this.cerrarForm();
       this.tituloShow=true;
       this.abstractShow=true;

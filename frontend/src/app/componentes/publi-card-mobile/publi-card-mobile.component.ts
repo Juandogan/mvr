@@ -20,6 +20,9 @@ export class PubliCardMobileComponent implements OnInit {
     this.stringIM = this.data?.imagen4.slice(8)
     this.stringIM = "https://www.museodelavidarural.com/upload/" +  this.stringIM
 
+    if(this.data.categoria === "Categoria"){
+      this.data.categoria = "Categoría"
+    }
 
   }
 
