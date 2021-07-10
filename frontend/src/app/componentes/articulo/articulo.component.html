@@ -1,4 +1,4 @@
-<div *ngIf='this.loader' style="height: 100vh;" >
+<div *ngIf='this.loader'  >
   <div class="text-center" style="margin-top:100px;  ">
 <img class="marginResponsive" src="../../../assets/loading4.gif" alt="" align='center' width="100px">
 </div>
@@ -54,11 +54,10 @@
 
                             <!-- MOBILE  -->
                           <div *ngIf="!this.loading" class="mobilePoner ml-1 mr-1 mb-1" style="display: none;" >
-                            <div class="col-12 pm0">
+                            <div>
                                <!-- <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%" > -->
                                <app-img-loader-ex image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/loading.gif'></app-img-loader-ex>
-
-
+                            </div>
                                <h5 *ngIf="!this.loading" style="display:none;"  >Imagen: {{nota.imagen2}}</h5>
 
 
