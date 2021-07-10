@@ -1,6 +1,6 @@
-<div>
+<div class="loading">
   <div  *ngIf="isLoading">
-     <img [src]="loader" style="width: 80px; margin-left:20%"/>
+     <img [src]="loader" style="width:15%!important;margin-left:42%; margin-top:25%; margin-bottom:20%"/>
     </div>
 
   <img  [hidden]="!imagenEstado" [src]=image [ngStyle]="{visibility:isLoading?'hidden':'',height:height+'px',width:width+'%'}"
