@@ -17,6 +17,11 @@ export class ArticuloCardComponent implements OnInit{
 
   }
 
+
+
+  ngAfterViewInit() {
+   }
+
   ngOnInit(){
 
     this.stringIM = this.data?.imagen4.slice(8)
@@ -30,7 +35,7 @@ this.data.categoria = "Artículos"
 
 if (this.data?.categoria === "Exposicion"){
   this.data.categoria = "Exposición"}
-  
+
 
 
 
@@ -50,23 +55,23 @@ scrollTop(){
 
 
 agregarVista(data:any){
-  this.crudService.unProducto = data
+this.crudService.unProducto = data
 this.crudService.unProducto.vistas = Number(this.crudService.unProducto.vistas) + 1
 console.log('dale',this.crudService.unProducto.vistas)
-if( data._id ) 
-{ 
+if( data._id )
+{
 
 this.crudService.modificarProducto(this.crudService.unProducto)
 .subscribe(res => {
   console.log("modificado  contanor")
-    
-                          });
-                    
-}  
 
-else  {        
+                          });
+
+}
+
+else  {
   //  this.crudService.unProducto.vistas = 0
-  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })       
+  //    this.crudService.addProducto(this.crudService.unProducto).subscribe(res => { console.log(res) })
 }
 };
 }

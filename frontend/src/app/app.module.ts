@@ -43,6 +43,10 @@ import {MatInputModule} from '@angular/material/input';
 import { BuscarPipe } from './pipes/buscar.pipe';
 import { PublicacionesComponent } from './componentes/publicaciones/publicaciones.component';
 import { SinpubliComponent } from './componentes/sinpubli/sinpubli.component';
+import { ImgLoaderComponent } from './componentes/img-loader/img-loader.component';
+import { ImgLoaderXLComponent } from './componentes/img-loader-xl/img-loader-xl.component';
+import { ImgLoaderSMComponent } from './componentes/img-loader-sm/img-loader-sm.component';
+import { ImgLoaderExComponent } from './componentes/img-loader-ex/img-loader-ex.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +76,11 @@ import { SinpubliComponent } from './componentes/sinpubli/sinpubli.component';
     BuscadorComponent,
     BuscarPipe,
     PublicacionesComponent,
-    SinpubliComponent
+    SinpubliComponent,
+    ImgLoaderComponent,
+    ImgLoaderXLComponent,
+    ImgLoaderSMComponent,
+    ImgLoaderExComponent
   ],
   imports: [
     BrowserModule,

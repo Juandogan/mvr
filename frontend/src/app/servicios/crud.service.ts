@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Producto } from '../modelos/productos';
 import * as moment from 'moment'
 import { of } from "rxjs"
 import { MatSnackBar } from '@angular/material/snack-bar';
+
 
 
 @Injectable({
@@ -12,6 +13,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class CrudService {
 
   readonly URL_API  = "https://www.museodelavidarural.com/productos";
+
+  $loading = new EventEmitter<boolean>();
 
   unProducto:Producto;
   productos: Producto[] =[];

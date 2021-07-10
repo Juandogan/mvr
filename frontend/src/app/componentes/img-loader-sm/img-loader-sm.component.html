@@ -1,0 +1,8 @@
+<div>
+  <div  *ngIf="isLoading">
+    <img [src]="loader" class="text-center" style="width:20%!important;margin-left:42%; margin-top:25%; margin-bottom:20%"/>
+  </div>
+
+  <img  [hidden]="!imagenEstado" [src]=image [ngStyle]="{visibility:isLoading?'hidden':'',height:height+'px',width:width+'%'}"
+  (load)="hideLoader()"  style="object-fit:cover; margin-top:0px"/>
+  </div>

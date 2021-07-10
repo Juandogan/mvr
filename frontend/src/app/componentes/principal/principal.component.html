@@ -2,7 +2,7 @@
 <div  (window:scroll)="evento($event)">
 <div *ngIf='loader' class="marginResposive">
   <div class="text-center" style="height: 40vh;">
-<img src="../../../assets/loading4.gif" alt="" align='center' width="100px">
+<img class="loader" src="../../../assets/loading4.gif" alt="" align='center' >
 </div>
 </div>
 
@@ -25,7 +25,7 @@
    <a routerLink='/todos/Artículos' style="z-index: 100;">
   <h2 class="tituloBarra" style="color:rgb(56, 56, 56)"> Últimas Novedades<span style="color:brown">- Ver más</span></h2>
 </a>
-  
+
 
    </div>
 
@@ -42,9 +42,7 @@
   <!-- desktop -->
   <br><br>
   <div class="row pm0 ">
-    <div *ngFor="let producto of productos |filtro:'Artículos'|filtrox4:4 "
-    class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 ocultar600 ;
-    ">
+    <div *ngFor="let producto of productos |filtro:'Artículos'|filtrox4:4"  class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 ocultar600 ocultar;">
       <!-- <img *ngIf="!this.crudService.loading" src="../../../assets/cabecera.png" alt="" style=" margin-left:40px; width: 70%; object-fit: cover;"> -->
 
    <app-articulo-card [data]="producto"></app-articulo-card>
@@ -59,6 +57,7 @@
 <div class="row pm0" style="margin-left:15px!important; margin-right: 15px!important; " >
   <div *ngFor="let producto of productos |filtro:'Artículos'|filtrox4:4 "
    class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding: 0px; padding-left:10px; margin-bottom:-0px">
+
  <app-articulo-card-desktop [data]="producto" ></app-articulo-card-desktop>
  </div>
 </div>

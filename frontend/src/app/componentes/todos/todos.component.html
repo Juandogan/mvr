@@ -1,22 +1,28 @@
 
 
   <div class="mt-1 divPrincipal"  (window:scroll)="evento($event)">
+
+    <!-- <div *ngIf='loader' >
+      <div class="text-center marginResposive">
+    <img src="../../../assets/loading4.gif" alt="" align='center' width="70px">
+    </div>
+    </div> -->
   <br>
 
-<div  style="margin-bottom: 10px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;" >
+<div *ngIf='!loader' style="margin-bottom: 10px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;" >
   <div class="flex-container ">
    <mat-icon style="margin-top:5px; margin-left:20px">content_copy</mat-icon>
-   
+
 
   <h2 class="categoriaString" style="color:brown">{{this.categoriaString}}</h2>
-    
+
 </div>
 </div>
 
 <br>
 <!-- <div class="flex-container3">
    <img src="../../../assets/recorteseparadoabajoizq.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
-    <img src="../../../assets/recorteSeparador1 abajoderecha.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px"> 
+    <img src="../../../assets/recorteSeparador1 abajoderecha.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
    </div> -->
 <div style="background-color:rgba(255, 255, 255, 0); margin-left:15px; margin-right: 15px; ">
 
@@ -24,7 +30,7 @@
 
     <div *ngFor="let producto of productos.reverse() |filtro:this.categoria"   class="col-sm-12 col-md-6 col-lg-3 col-xl- 3  ajusteResposive">
       <div class="ocultar600">
-      <div *ngIf='this.categoria !="Videos"'>
+      <div *ngIf='this.categoria !=="Videos"'>
         <app-articulo-card [data]="producto"></app-articulo-card>
       </div>
       <div *ngIf='this.categoria ==="Videos"'>
@@ -36,7 +42,7 @@
 
   <div class="mostrar600">
 
-    <div *ngIf='this.categoria !="Videos"'>
+    <div *ngIf='this.categoria !=="Videos"'>
         <app-articulo-card-desktop [data]="producto"></app-articulo-card-desktop>
       </div>
 
@@ -61,12 +67,10 @@
 <!-- mobile -->
 <div class="mostrar600">
   <div class="row pm0" >
-    <div *ngFor="let producto of productos |filtro:'Categoria'"   class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding: 0px; padding-left:0px; margin-bottom:-0px">
-
+    <div *ngFor="let producto of productos |filtro:'Categoria'"   class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3" style="padding: 0px; padding-left:0px; margin-bottom:-0px">
       <app-publi-card-mobile [data]="producto" ></app-publi-card-mobile>
-
    </div>
   </div>
 <!-- mobile -->
-
+</div>
 </div>

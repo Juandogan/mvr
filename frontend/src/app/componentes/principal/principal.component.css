@@ -5,8 +5,8 @@
     border-top: 1px solid gainsboro;
     border-bottom: 1px solid gainsboro;
   }
+.loader{width:100px}
 
-  
 a{text-decoration: none;}
   .marginResposive{margin-top:250px}
   .marginB{margin-top:-80px!important; }
@@ -150,8 +150,9 @@ a{text-decoration: none;}
   }
 
   @media  (max-width: 620px){
-    .mostrar600{display:inline}
+    .mostrar600{display:block}
     .ocultar600{display:none}
+    .ocultar{display:none!important}
     .marginPadding0{margin:0px!important; padding: 0px!important;}
     .separador{margin-top:10px;}
     .separador1{margin-top:-45px;}
@@ -160,5 +161,6 @@ a{text-decoration: none;}
     .separadorPubli{margin-top: 10px!important;}
     .cardExpo{margin-bottom:-10px!important}
     .marginB{margin-top: 5px!important;}
+    .loader{width:70px}
   }
 

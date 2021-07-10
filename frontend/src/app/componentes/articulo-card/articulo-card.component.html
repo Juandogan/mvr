@@ -7,12 +7,20 @@
              <h6 style="font-size: 15px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown; margin-left:3px">#{{this.data?.categoria}}</h6>
             <div style="margin-top:-10px">
 
-              <a routerLink="../../articulos/{{data?._id}}" (click)='this.agregarVista(data)' > 
 
-                <h5 class="titulo text1 mt-2"   >{{this.data?.titulo}}</h5> </a>
+              <a routerLink="../../articulos/{{data?._id}}" (click)='this.agregarVista(data)' >
+                <h5 class="titulo text1 mt-2"   >{{this.data?.titulo}}</h5>
+              </a>
+
                 <small class="text2 subtitulo" style="margin-bottom:0px" >{{this.data?.subtitulo}}</small>
 
-                <a routerLink="../articulos/{{data?._id}}"><img src="{{this.stringIM}}" width="100%" style="border-radius: 5px; margin-top:10px"></a>
+                <a routerLink="../articulos/{{data?._id}}">
+
+                  <app-img-loader image="{{this.stringIM}} " loader='../../../assets/loading.gif' ></app-img-loader>
+
+
+
+                  <!-- <img src="{{this.stringIM}}" width="100%" style="border-radius: 5px; margin-top:10px">--></a>
                 <!-- <h5  class="mt-1  " style="font-size: 12px; margin-left:5px; color:brown">Leer más..</h5> -->
 
 
@@ -71,7 +79,6 @@
 
 
           </div> -->
-
 
 
       </div>

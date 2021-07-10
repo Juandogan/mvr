@@ -4,8 +4,9 @@
   <div class="col-4 pm0">
 
     <a  routerLink="../articulos/{{data?._id}}">
-      <img src="{{this.stringIM}}" width="100%">
-                                                        </a>
+      <!-- <img src="{{this.stringIM}}" width="100%"> -->
+      <app-img-loader-sm  image="{{this.stringIM}} " loader='../../../assets/7plX.gif' ></app-img-loader-sm>
+      </a>
 
 
   </div>

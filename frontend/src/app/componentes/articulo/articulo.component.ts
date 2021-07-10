@@ -13,51 +13,44 @@ import { Producto } from '../../modelos/productos';
 
 export class ArticuloComponent implements OnInit {
 
-
-
   @HostListener("scroll", ['$event'])
+
   public nota: Producto;
   public loading:any;
   public notas:any
-  public loader:any
-  constructor(
-    private ruta:ActivatedRoute,
-    public crudService:CrudService,
-    private location: Location
-
-
-
-) {
-
+  public loader:boolean = true
+  constructor(private ruta:ActivatedRoute, public crudService:CrudService,  private location: Location)
+  {
+    this.crudService.$loading.emit(true)
     this.nota = new Producto();
-    this.ruta.params.subscribe(params=>{params['_id'];
-
-    this.crudService.getOneCard(params['_id'])
-    .subscribe(res=> {this.nota = res as Producto; 
-   
-      window.scrollTo(0,0);
-    this.loader = false;
-    }
-   );
-   })
   }
 
   ngOnInit(): void {
-    this.loader=true
-    this.crudService.scrolled =false
+this.loader=true
+    this.ruta.params.subscribe(params=>{params['_id'];
+    this.crudService.getOneCard(params['_id']).subscribe(res=> {this.nota = res as Producto;
+     window.scrollTo(0,0);});})
+
+        this.crudService.scrolled =false
+    this.crudService.getProductos().subscribe(res=>{
+    this.notas = res as Producto;
+    this.loader=false
+  })
+
+
+  }    //FIN
+
+  ngAfterViewInit() {
 
 
 
-      this.crudService.getProductos().subscribe(res=>{
-      this.notas = res as Producto;
- 
-      })
 
-  }
+
+  } //FIN
+
 
   cut(value:any){
      var corte = value.slice(8)
-
     return corte
   };
 
@@ -81,6 +74,9 @@ export class ArticuloComponent implements OnInit {
 
 
   };
+  ngOnDestroy(){
 
+    this.crudService.$loading.emit(true)
+   }
 
 }

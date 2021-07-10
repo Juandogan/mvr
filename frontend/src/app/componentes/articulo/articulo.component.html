@@ -1,10 +1,13 @@
+<div *ngIf='this.loader' >
+  <div class="text-center" style="margin-top:100px">
+<img class="marginResponsive" src="../../../assets/loading4.gif" alt="" align='center' width="100px">
+</div>
+</div>
+
+
 
 <div class="marginTop"  (window:scroll)="evento($event)" >
-  <div *ngIf='loader' >
-    <div class="text-center  ">
-  <img class="marginResponsive" src="../../../assets/loading4.gif" alt="" align='center' width="100px">
-  </div>
-  </div>
+
 <div *ngIf='!loader'>
   <div class="row pm0" >
 
@@ -12,30 +15,31 @@
   <div>
       <!-- encabezado -->
       <div class="ml-2 mr-2 mt-2  pm0">
-      <h5 *ngIf="!this.loading" class="categoria">#{{ nota.categoria }}</h5>
+
+      <h5 *ngIf="nota.categoria"  class="categoria">#{{ nota.categoria }}</h5>
       <h1 class="ajusteFontTitulo titulo " > {{ nota.titulo }}</h1>
       <h2 class="ajusteFontSub subtitulo " [innerHTML]=saltos(nota.subtitulo)></h2>
       <hr style="margin-top:-8px!important; margin-bottom:15px!important; margin-left:10px; margin-right: 20px;">
 
       <!-- fecha y autor -->
-      <div style="display: flex; justify-content: left; margin-left:10px">
-
+      <div *ngIf="!this.loader" style="display: flex; justify-content: left; margin-left:10px">
           <div>
-                <div *ngIf=(nota.descripcion3)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px">
-                   <mat-icon *ngIf="!this.loading" class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">event_available</mat-icon>
+                <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px">
+                   <mat-icon *ngIf="nota.creado" class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">event_available</mat-icon>
                      <div>
                           <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(145, 145, 145)">{{this.crudService.fechaPipe(nota.creado)}}</h3>
                      </div>
                  </div>
+
 
           </div>
 
       <div style="margin-top:0px; margin-right: 10px;">
 
                               <div *ngIf=(nota.descripcion3)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px">
-                                  <mat-icon *ngIf="!this.loading"class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
+                                  <mat-icon *ngIf="!this.loader" class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
                                     <div>
-                                            <h3 *ngIf="!this.loading" class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">{{nota.imagen3}}</h3>
+                                            <h3 *ngIf="nota.imagen3" class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">{{nota.imagen3}}</h3>
                                     </div>
                               </div>
                           </div>
@@ -50,8 +54,9 @@
 
                             <!-- MOBILE  -->
                           <div *ngIf="!this.loading" class="mobilePoner ml-1 mr-1 mb-1" style="display: none;" >
-                            <div *ngIf="nota.subtitulo">
-                               <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%" >
+                            <div>
+                               <!-- <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%" > -->
+                               <app-img-loader-ex image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} "></app-img-loader-ex>
                             </div>
                                <h5 *ngIf="!this.loading" style="display:none;"  >Imagen: {{nota.imagen2}}</h5>
 
@@ -63,9 +68,11 @@
                           <!-- DESKTOP  -->
 
 <div style="margin-right: 30px;">
-  <div class="col-12 pm0"  >  
+  <div class="col-12 pm0"  >
     <div *ngIf="nota.subtitulo">
-    <img class="IMGdesktop" src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%">
+    <!-- <img class="IMGdesktop" src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%"> -->
+    <app-img-loader-xl class="IMGdesktop" image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/7plX.gif' ></app-img-loader-xl>
+
   </div>
   <div *ngIf="nota.subtitulo">
     <h5 *ngIf="!this.loading" style="margin-left:10px!important">Imagen: <b>{{nota.imagen2}}</b></h5>
@@ -88,7 +95,7 @@
 
 
 
-                                          <div *ngIf="!this.loading" style="margin-top:0px; margin-right: 10px;">
+                                          <div *ngIf="nota.creado" style="margin-top:0px; margin-right: 10px;">
                                               <a  *ngIf="!nota.subtitulo"  href="https://www.museodelavidarural.com/upload/{{this.cut(nota.imagen5)}}"  target="_blank" download="Archivo" class="btn btn-success" >Descargar</a>
                                                <button class="btn btn-danger" style="margin-left:5px" (click)="cancel()">Volver</button>
                                                <!-- <img src="../../../assets/logo.jpg" alt="" width="30px"> -->
@@ -102,19 +109,19 @@
                  </div>
        </div>
 
-      <div *ngIf='!this.loading' class="col-3 pm0 IMGdesktop "  style="background-color: rgba(255, 255, 255, 0.301);" >
-        
+      <div *ngIf='nota.creado' class="col-3 pm0 IMGdesktop "  style="background-color: rgba(255, 255, 255, 0.301);" >
+
 <div *ngIf="nota.subtitulo">
         <img src="../../../assets/fondolateral.JPG" alt="" style="object-fit: cover; width: 100%; opacity: 0.5;">
      <div  *ngFor="let producto of notas|filtro:'Artículos'|filtrox4:3" style="margin-bottom:5px;">
 
       <app-laterl-articulo [data]="producto"></app-laterl-articulo>
-      
+
     </div>
     <img src="../../../assets/fondolateral2.jpg" alt="" style="object-fit: cover; width: 100%;opacity: 0.6;">
   </div>
       </div>
-    
+
   </div>
 </div>
 </div>

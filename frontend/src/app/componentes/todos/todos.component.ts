@@ -17,22 +17,22 @@ export class TodosComponent implements OnInit  {
   productos: any;
   categoriaString:string =''
   cantidad:any;
-  cambioPlantilla:boolean = true
+  cambioPlantilla:boolean = true;
+  loader = true;
+
   constructor(public crudService:CrudService, public ruta:ActivatedRoute) {
     this.crudService.scrolled =false
-    window.scrollTo(0,0);
+
    }
 
 
   ngOnInit(): void {
-
+      window.scrollTo(0,0);
 
      this.ruta.params.subscribe(params=>{this.categoria = params['categoria'];
      this.categoriaString = ''
-
-    this.categoriaString = this.categoria
-    window.scrollTo(0,0);
-    console.log(this.categoria)
+      this.categoriaString = this.categoria
+        console.log(this.categoria)
     if(this.categoria === "Articulos"){this.categoriaString = "Artículos - Novedades"; }
 
     if(this.categoria === "Exposicion"){
@@ -40,10 +40,9 @@ export class TodosComponent implements OnInit  {
 
       if(this.categoria === "Publicaciones"){
         this.cambioPlantilla = false;
-        this.categoriaString = 'Publicaciones en PDF'
+     }
+       else {this.cambioPlantilla = true}
 
-      } else {this.cambioPlantilla = true}
-          
 
         })
 
@@ -64,7 +63,7 @@ this.productos = []=[]
     this.crudService.getProductos().subscribe(res =>{
     this.crudService.productos = res as Producto[];  // guardo resultados de la peticion en el servicio
     this.productos = res as Producto[]; // guardo resultados de la peticion en variable productos del este componente.
-
+    this.loader = false
     // if(this.categoria === "Articulos"){
     //   this.cantidad = this.filtro(this.productos, 'Articulos' )
     //   this.cantidad = this.cantidad.length
@@ -118,6 +117,12 @@ evento($event:any)
   scrollTop(){
     window.scrollTo(0,0);
   }
+
+
+NgOnDestroy(){
+  this.categoria = ''
+    this.categoriaString = ''
+}
 
  }
 
