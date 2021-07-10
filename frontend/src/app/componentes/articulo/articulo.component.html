@@ -56,7 +56,7 @@
                           <div *ngIf="!this.loading" class="mobilePoner ml-1 mr-1 mb-1" style="display: none;" >
                             <div>
                                <!-- <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%" > -->
-                               <app-img-loader-ex image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/7plX.gif'></app-img-loader-ex>
+                               <app-img-loader-ex image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/loading.gif'></app-img-loader-ex>
                             </div>
                                <h5 *ngIf="!this.loading" style="display:none;"  >Imagen: {{nota.imagen2}}</h5>
 
@@ -71,7 +71,7 @@
   <div class="col-12 pm0"  >
     <div *ngIf="nota.subtitulo">
     <!-- <img class="IMGdesktop" src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%"> -->
-    <app-img-loader-xl class="IMGdesktop" image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/7plX.gif' ></app-img-loader-xl>
+    <app-img-loader-xl class="IMGdesktop" image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/loading.gif' ></app-img-loader-xl>
 
   </div>
   <div *ngIf="nota.subtitulo">
