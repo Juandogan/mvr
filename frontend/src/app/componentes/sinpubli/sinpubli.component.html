@@ -1,15 +1,52 @@
-<div style="margin-top:180px">
-            
-            <div  class="text-center">
-                    <br>
-                    <mat-icon style="font-size: 40px; color:brown">museum</mat-icon>
-                    <h5>Aún no hay publicaciones en esta sección</h5>
-                    <h1></h1>
-                    <h6 style="margin-left:10px" >Convocatoria a publicar abierta</h6>
-                    <button class="btn btn-danger" (click)="this.cancel()">Volver</button>
-                </div>         
-            </div>
-  
-    <!-- <hr *ngIf="!this.loading">        -->
-         
-    
+
+
+  <div class="mt-1 divPrincipal"  (window:scroll)="evento($event)">
+
+
+    <br>
+
+  <div  style="margin-bottom: 10px; background-color: rgb(255, 255, 255); border-top: 1px solid gainsboro;border-bottom: 1px solid gainsboro;" >
+
+
+  <div class="flex-container2">
+
+        <div class="flex-container ">
+            <mat-icon style="margin-top:5px; margin-left:20px">content_copy</mat-icon>
+            <h2 class="categoriaString" style="color:brown">Publicaciones PDF</h2>
+        </div>
+
+        <mat-icon (click)="this.cancel()" style="margin-top:5px; margin-right:20px">close</mat-icon>
+  </div>
+
+
+
+
+
+  </div>
+
+  <br>
+  <!-- <div class="flex-container3">
+     <img src="../../../assets/recorteseparadoabajoizq.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
+      <img src="../../../assets/recorteSeparador1 abajoderecha.png" alt="" style="opacity:0.8; width: 100px; margin-top:-31px">
+     </div> -->
+
+
+  <div>
+    <!-- desktop -->
+    <div class="ocultar600">
+      <app-publi-card></app-publi-card>
+  </div>
+  <!-- desktop -->
+
+  <!-- mobile -->
+  <div class="mostrar600">
+    <div class="row pm0" >
+      <div *ngFor="let producto of productos |filtro:'Categoria'"   class="pm0 col-sm-12 col-md-6 col-lg-3 col-xl-3 mostrar600" style="padding: 0px; padding-left:0px; margin-bottom:-0px;
+      margin-left:10px; margin-right: 10px;">
+          <app-publi-card-mobile [data]="producto" ></app-publi-card-mobile>
+
+     </div>
+    </div>
+  <!-- mobile -->
+
+  </div>

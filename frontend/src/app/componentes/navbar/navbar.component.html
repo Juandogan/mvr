@@ -36,7 +36,7 @@
 
                                         <a matRipple [matRippleColor]='color'
                                         [matRippleCentered]="centrado"
-                                        [matRippleRadius]="radius" routerLink='./todos/Publicaciones' >
+                                        [matRippleRadius]="radius" routerLink='../sin' >
                                        <mat-icon  [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'"class="agregar600 navbarResponsive" (click)="this.crudService.inicioBarra()">account_balance</mat-icon>
                                        <h3   [ngClass]="{ fondoIcon: this.crudService.scrolled }"[routerLinkActive]="'activo'"  class="subtituloResposive2 font mr-1 quitar600"(click)="this.inicioBarra()" >Publicaciones</h3>
                                       </a>

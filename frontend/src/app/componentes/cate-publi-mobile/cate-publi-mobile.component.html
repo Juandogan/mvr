@@ -1,23 +1,25 @@
 
-      <div class="card sombraBox as" style="padding: 10px; padding-bottom:0px; background-color: rgb(255, 255, 255);  margin-bottom:-80px; margin-left:15px; margin-right: 15px;">
+      <div class="card sombraBox as" style="padding: 10px; padding-bottom:0px; background-color: white;  margin-bottom:-80px;">
         <div class="row pm0" >
           <div class="col-4 pm0">
 
-            <a  routerLink="../articulos/{{data?._id}}">
-              <img src="{{this.stringIM}}" width="100%">
-                                                                </a>
+            <a  routerLink="../todos/{{data?.titulo}}">
+              <!-- <img src="{{this.stringIM}}" width="100%"> -->
+              <app-img-loader-sm  image="{{this.stringIM}} " loader='../../../assets/loading.gif' ></app-img-loader-sm>
+              </a>
 
 
           </div>
           <div class="col-8 pm0 " style="padding-left:10px!important;">
                 <div class="card-content ">
                   <div class="card-title">
-                    <h6 class="cate" style="font-size: 12px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown; margin-left:3px">#{{this.data?.categoria}}</h6>
+                    <h6 class="cate" style="font-size: 15px; font-family: 'Yanone Kaffeesatz', sans-serif; color:brown; margin-left:3px">#{{this.data?.categoria}}</h6>
                     <div style="margin-top:-10px">
-                      <a routerLink="../todos/{{data?.titulo}}">
-                      <h5 class="titulo " >{{this.data?.titulo}}</h5>
+                      <a  routerLink="../../todos/{{data?.titulo}}">
+                      <h5 class="titulo text1" >{{this.data?.titulo}}</h5>
                     </a>
-                    <small class="text1 subtitulo" >{{this.data?.subtitulo}}</small>
+                    <small *ngIf='this.data?.subtitulo'class="text1 subtitulo" >{{this.data?.subtitulo}}</small>
+                    <small *ngIf='!this.data?.subtitulo' class="text2 subtitulo" >{{this.data?.descripcion1}}</small>
 
                     </div>
                   </div>

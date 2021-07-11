@@ -47,6 +47,7 @@ import { ImgLoaderComponent } from './componentes/img-loader/img-loader.componen
 import { ImgLoaderXLComponent } from './componentes/img-loader-xl/img-loader-xl.component';
 import { ImgLoaderSMComponent } from './componentes/img-loader-sm/img-loader-sm.component';
 import { ImgLoaderExComponent } from './componentes/img-loader-ex/img-loader-ex.component';
+import { CatePubliMobileComponent } from './componentes/cate-publi-mobile/cate-publi-mobile.component';
 
 @NgModule({
   declarations: [
@@ -80,7 +81,8 @@ import { ImgLoaderExComponent } from './componentes/img-loader-ex/img-loader-ex.
     ImgLoaderComponent,
     ImgLoaderXLComponent,
     ImgLoaderSMComponent,
-    ImgLoaderExComponent
+    ImgLoaderExComponent,
+    CatePubliMobileComponent
   ],
   imports: [
     BrowserModule,

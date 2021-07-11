@@ -1,4 +1,4 @@
-<div *ngIf='this.loader'  >
+<div *ngIf='this.loader'   >
   <div class="text-center" style="margin-top:100px;  ">
 <img class="marginResponsive" src="../../../assets/loading4.gif" alt="" align='center' width="100px">
 </div>
@@ -22,57 +22,30 @@
       <hr style="margin-top:-8px!important; margin-bottom:15px!important; margin-left:10px; margin-right: 20px;">
 
       <!-- fecha y autor -->
-      <div *ngIf="!this.loader" style="display: flex; justify-content: left; margin-left:10px">
-          <div>
-                <div   style="display:flex ; align-items: flex-start; margin-top:-5px; margin-left:-10px; margin-right: 5px">
-                   <mat-icon *ngIf="nota.creado" class="mr-corre mr-2 ml-2 "style="font-size:19px; color:rgb(145,145,145)">event_available</mat-icon>
-                     <div>
-                          <h3 class="subtituloResposive2 " style="font-size:11px;  margin-top:-3px; margin-left: -10px;  color:rgb(145, 145, 145)">{{this.crudService.fechaPipe(nota.creado)}}</h3>
-                     </div>
-                 </div>
 
-
-          </div>
-
-      <div style="margin-top:0px; margin-right: 10px;">
-
-                              <div *ngIf=(nota.descripcion3)  style="display:flex ; align-items: flex-start; margin-top:-5px; margin-right: 5px">
-                                  <mat-icon *ngIf="!this.loader" class="mr-2"style="font-size:19px; color:gray">account_circle</mat-icon>
-                                    <div>
-                                            <h3 *ngIf="nota.imagen3" class="subtituloResposive2" style="font-size:11px; margin-top:-3px; margin-left: -10px;  color:gray">{{nota.imagen3}}</h3>
-                                    </div>
-                              </div>
-                          </div>
-
-      <!-- fecha y autor -->
-
-
-</div>
     </div>
 
       <!-- encabezado -->
 
                             <!-- MOBILE  -->
+                            <div class="col-12 pm0" >
                           <div *ngIf="!this.loading" class="mobilePoner ml-1 mr-1 mb-1" style="display: none;" >
-                            <div>
-                               <!-- <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%" > -->
-                               <app-img-loader-ex image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/loading.gif'></app-img-loader-ex>
+                            <div >
+                              <img src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%">
                             </div>
                                <h5 *ngIf="!this.loading" style="display:none;"  >Imagen: {{nota.imagen2}}</h5>
-
-
                           </div>
-                            <!-- MOBILE  -->
+                        </div>
+  <!-- MOBILE  -->
 
 
-                          <!-- DESKTOP  -->
+  <!-- DESKTOP  -->
 
 <div style="margin-right: 30px;">
   <div class="col-12 pm0"  >
     <div *ngIf="nota.subtitulo">
     <!-- <img class="IMGdesktop" src='https://museodelavidarural.com/upload/{{cut(nota.imagen4)}}' width="100%"> -->
     <app-img-loader-xl class="IMGdesktop" image="https://museodelavidarural.com/upload/{{cut(nota.imagen4)}} " loader='../../../assets/loading.gif' ></app-img-loader-xl>
-
   </div>
   <div *ngIf="nota.subtitulo">
     <h5 *ngIf="!this.loading" style="margin-left:10px!important">Imagen: <b>{{nota.imagen2}}</b></h5>
