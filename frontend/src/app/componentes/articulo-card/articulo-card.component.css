@@ -6,7 +6,7 @@ img{object-fit: cover; border-radius: 1px; height: 200px!important;}
 
 
 }
-.subtitulo{margin-left:4px; margin-top:-5px; line-height:17px; font-size:12px ; font-family: 'Ubuntu', sans-serif; }
+.subtitulo{margin-left:4px;min-height: 50px; margin-top:-5px; line-height:17px; font-size:12px ; font-family: 'Ubuntu', sans-serif; }
 
 .subtituloResposive2{font-family: 'Ubuntu', sans-serif; font-size:10px;margin-right: 5px; margin-top:0px; margin-left: -16px; color:rgb(148, 148, 148)}
 
@@ -32,9 +32,11 @@ a{color:rgb(0, 0, 0)}
 
 
 
-@media  (max-width: 1500px){
+@media  (max-width: 2500px){
   img{height: 140px!important;}
- .titulo{font-size: 100%; line-height: 20px;}
+ .titulo{font-size: 120%; line-height: 20px;text-transform: uppercase;
+  color: rgb(37, 37, 37) ; 
+}
   }
 
   @media  (max-width: 1200px){

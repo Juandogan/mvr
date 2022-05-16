@@ -23,10 +23,10 @@ img:active{opacity: 0.2;}
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden; }
-.sombraBox{
+/* .sombraBox{
   -webkit-box-shadow: 6px 3px 17px -9px #000000;
   box-shadow: 6px 3px 17px -9px #000000;
-}
+} */
 
 .animation {
   animation-duration: 1s;
