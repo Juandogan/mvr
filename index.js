@@ -9,8 +9,8 @@ const morgan = require ('morgan'); // middleware Morgan muestra las peticiones e
 const cors = require ('cors');     // autorizacion de cxn entre servidores
 const { mongoose } = require('./database'); //mongodb
 
-var fs = require('fs');
-var https = require('https');
+// var fs = require('fs');
+// var https = require('https');
 
 
 const multiPartMiddleware = multipart({
@@ -28,7 +28,8 @@ app.set('port', process.env.PORT || 3000);  // tomo app e nsu propiedad .set  //
 // Midlewares
 app.use(morgan('dev')); // morgan es una funcion, la pegamos en la propiedad use de app. y pasamos el parametro dev que indica que mostrara el mensaje por consola de desarrollo. 
 app.use(express.json()); // habilita para que el servidor entienda formato json, es una propiedad de la dependencia Express.npom
-app.use(cors('http://157.230.228.106:4200'));
+// app.use(cors('http://157.230.228.106:4200'));
+app.use(cors('http://localhost:4200'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended : true
@@ -59,12 +60,12 @@ app.get('*', function(req, res, next)
 const PUERTO = 3002 ;
 
 // Starting server  
- https.createServer({
-     cert: fs.readFileSync('museodelavidarural.com.crt'),
-     key: fs.readFileSync('museodelavidarural.com.key') 
-   },app).listen(PUERTO, function(){
-    console.log('Servidor https correindo en el puerto 443');
- });
+  https.createServer({
+      cert: fs.readFileSync('museodelavidarural.com.crt'),
+      key: fs.readFileSync('museodelavidarural.com.key') 
+    },app).listen(PUERTO, function(){
+     console.log('Servidor https correindo en el puerto 443');
+  });
 
 
 
